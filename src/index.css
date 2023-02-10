@@ -20,7 +20,9 @@ code {
 .top-marg-signup{
   margin-top: 15rem;
 }
-
+.hide-feature{
+  display: none;
+}
 @media screen and (max-width: 900px) {
   .top-marg, .top-marg-signup{
     margin-top: 4rem;

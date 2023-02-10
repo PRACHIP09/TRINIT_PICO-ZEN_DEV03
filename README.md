@@ -1,1 +1,1 @@
-# TRINIT_PICO-ZEN
+# Nit_Trichy_Hackathon

@@ -22,18 +22,21 @@ const NavbarF = () => {
   return (
     <div>
       <Grid container spacing={2} sx={{padding: "3vh 0vh"}}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={8} className="webnavbar">
+        <Grid item xs={2}></Grid>
+        <Grid item xs={10} className="webnavbar">
           <Grid container spacing={2}
             sx={{ fontSize: "1.35rem", textDecoration: "none" }}>
             <Grid item xs={2}>
               <NavLink exact activeClassName="active" to='/home-farmer' className="indicator">HOME</NavLink>
             </Grid>
             <Grid item xs={2}>
-              <NavLink activeClassName="active" to='/products-to-sell' className="indicator">Products</NavLink>
+              <NavLink activeClassName="active" to='/products-to-sell' className="indicator">PRODUCTS</NavLink>
+            </Grid>
+            <Grid item xs={1}>
+              <NavLink activeClassName="active" to='/schemes' className="indicator">SCHEMES</NavLink>
             </Grid>
             <Grid item xs={2}>
-              <NavLink activeClassName="active" to='/schemes' className="indicator">SCHEMES</NavLink>
+              <NavLink activeClassName="active" to='/prediction' className="indicator">KNOW MORE</NavLink>
             </Grid>
             <Grid item xs={2}>
               <NavLink activeClassName="active" to='/questions' className="indicator">QUESTIONS</NavLink>
@@ -41,7 +44,7 @@ const NavbarF = () => {
             <Grid item xs={2}>
               <NavLink activeClassName="active" to='/rawmaterials' className="indicator">RAWMATERIALS</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/' className="indicator">LOGOUT</NavLink>
             </Grid>
           </Grid>

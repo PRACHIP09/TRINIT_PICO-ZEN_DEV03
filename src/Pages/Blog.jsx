@@ -20,7 +20,7 @@ const Blog= () => {
           Description
         </Grid>
         <Grid item xs={12} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
-          <div onClick={handleOpen}>Share new Experience</div>
+          <div onClick={handleOpen}>Share Innovation</div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>

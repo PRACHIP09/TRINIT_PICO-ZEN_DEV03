@@ -22,8 +22,7 @@ const NavbarE = () => {
   return (
     <div>
       <Grid container spacing={2} sx={{padding: "3vh 0vh"}}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={8} className="webnavbar">
+        <Grid item xs={12} className="webnavbar">
           <Grid container spacing={2}
             sx={{ fontSize: "1.35rem", textDecoration: "none" }}>
             <Grid item xs={2}>
@@ -32,16 +31,19 @@ const NavbarE = () => {
             <Grid item xs={2}>
               <NavLink activeClassName="active" to='/products' className="indicator">PRODUCTS</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/cart-enthusiast' className="indicator">CART</NavLink>
             </Grid>
             <Grid item xs={2}>
               <NavLink activeClassName="active" to='/plants-information' className="indicator">PLANTS</NavLink>
             </Grid>
             <Grid item xs={2}>
+              <NavLink activeClassName="active" to='/donate' className="indicator">DONATE</NavLink>
+            </Grid>
+            <Grid item xs={2}>
               <NavLink activeClassName="active" to='/' className="indicator">LOGUT</NavLink>
             </Grid>
-            <Grid item xs={2} style={{ cursor: "pointer" }}
+            <Grid item xs={1} style={{ cursor: "pointer" }}
               onClick={() => setModalOpen(!ModalOpen)}>
               <SmartToyIcon style={{ color: "#136a53", width: "5vh", height: "5vh" , marginTop:"-1vh" }} />
             </Grid>

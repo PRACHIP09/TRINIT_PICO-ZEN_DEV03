@@ -26,8 +26,14 @@ const Navbar = () => {
         <Grid item xs={8} className="webnavbar">
           <Grid container spacing={2}
             sx={{ fontSize: "1.35rem", textDecoration: "none" , textAlign:"right"}}>
-            <Grid item xs={7}>
+            <Grid item xs={3}>
               <NavLink exact activeClassName="active" to='/' className="indicator">HOME</NavLink>
+            </Grid>
+            <Grid item xs={2}>
+              <NavLink activeClassName="active" to='/search' className="indicator">SEARCH</NavLink>
+            </Grid>
+            <Grid item xs={2}>
+              <NavLink activeClassName="active" to='/blog' className="indicator">BLOG</NavLink>
             </Grid>
             <Grid item xs={2}>
               <NavLink activeClassName="active" to='/contactus' className="indicator">CONTACT US</NavLink>

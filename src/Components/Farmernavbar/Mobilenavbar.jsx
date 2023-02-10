@@ -17,7 +17,7 @@ const Mobilenavbar = () => {
                     <NavLink activeClassName="active" to='/schemes' className="indicator">SCHEMES</NavLink>
                 </Grid>
                 <Grid item xs={12}>
-                    <NavLink activeClassName="active" to='/cart-farmer' className="indicator">CART</NavLink>
+                    <NavLink activeClassName="active" to='/questions' className="indicator">QUESTIONS</NavLink>
                 </Grid>
                 <Grid item xs={12}>
                     <NavLink activeClassName="active" to='/rawmaterials' className="indicator">RAWMATERIALS</NavLink>

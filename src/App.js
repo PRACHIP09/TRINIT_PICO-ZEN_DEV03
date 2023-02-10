@@ -9,7 +9,6 @@ import Footer from './Components/ChatBot/Footer';
 import NavbarF from './Components/Farmernavbar/NavbarF';
 import Plants from './Pages/Farmers/Plants';
 import Schemes from './Pages/Farmers/Schemes';
-import Carts from './Pages/Farmers/Carts';
 import Rawmaterial from './Pages/Farmers/Rawmaterial';
 import NavbarE from './Components/Enthusiastsnavbar/NavbarE';
 import HomepageF from './Pages/Farmers/HomepageF';
@@ -22,6 +21,11 @@ import NavbarG from './Components/Government.jsx/NavbarG';
 import SchemesG from './Pages/Government/SchemesG';
 import Display from './Pages/Government/Display';
 import Doubts from './Pages/Government/Doubts';
+import QuestionAns from './Pages/Farmers/QuestionAns';
+import Card from './Components/Enthusiastsnavbar/Card';
+import Donation from './Components/Enthusiastsnavbar/Donation';
+import Search from './Pages/Search';
+import Blog from './Pages/Blog';
 
 function App() {
   return (
@@ -33,7 +37,7 @@ function App() {
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><Footer/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><Footer/></>}/>
       <Route path="/schemes" element={<><NavbarF/><Schemes/><Footer/></>} />
-      <Route path="/cart-farmer" element={<><NavbarF/><Carts/><Footer/></>} />
+      <Route path="/questions" element={<><NavbarF/><QuestionAns/><Footer/></>} />
       <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><Footer/></>} />
       <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><Footer/></>}/>
       <Route path="/products" element={<><NavbarE/><PlantsProduct/><Footer/></>}/>
@@ -44,8 +48,9 @@ function App() {
       <Route path="/schemes-govn" element={<><NavbarG/><Display/><Footer/></>}/>
       <Route path="/add-schemes" element={<><NavbarG/><SchemesG/><Footer/></>} />
       <Route path="/doubts" element={<><NavbarG/><Doubts/><Footer/></>} />
-      
-
+      <Route path="/donate" element={<><NavbarE/><Donation/><Footer/></>} />
+      <Route path="/search" element={<><Navbar/><Search/><Footer/></>} />
+      <Route path="/blog" element={<><Navbar/><Blog/><Footer/></>} />
     </Routes>
   );
 }

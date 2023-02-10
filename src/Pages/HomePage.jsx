@@ -39,7 +39,7 @@ const HomePage = () => {
                           <div style={{ fontSize: "2.5rem", textAlign: "left", marginTop: "2%", padding: "0vh 2vh" }}>
                             Title Here</div>
                           <div style={{ fontSize: "1.3rem", textAlign: "left", marginTop: "7%", padding: "1vh 2vh" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
+                            Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
                             Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper. Cras pulvinar mattis nunc sed blandit libero volutpat.
                             Sagittis purus sit amet volutpat. Leo in vitae turpis massa sed elementum tempus. Urna neque viverra justo nec ultrices dui.
                             Sagittis nisl rhoncus mattis rhoncus urna. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Nullam ac tortor vitae purus.

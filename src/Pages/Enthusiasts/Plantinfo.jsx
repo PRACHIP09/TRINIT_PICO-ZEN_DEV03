@@ -1,6 +1,6 @@
 import { Card, Grid, Button, Checkbox, Modal } from '@mui/material'
 import React from 'react'
-import image from '../../Images/login.webp'
+import image from '../../Images/orchid.webp'
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Info from './Info';

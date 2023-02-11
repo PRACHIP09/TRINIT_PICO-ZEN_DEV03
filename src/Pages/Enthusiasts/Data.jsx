@@ -4,6 +4,10 @@ import { useFormik } from "formik";
 import * as yup from 'yup';
 import image from '../../Images/login.webp'
 import { CChart } from '@coreui/react-chartjs'
+import InvertColorsIcon from '@mui/icons-material/InvertColors';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import AirIcon from '@mui/icons-material/Air';
+import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
 
 const style = {
     position: 'absolute',
@@ -27,7 +31,7 @@ const Data = () => {
                             <Grid item xs={12}>
                                 <Card style={{ boxShadow: "none", backgroundColor: "#A0D9F2" }}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={3}>icon</Grid>
+                                        <Grid item xs={3}><InvertColorsIcon sx={{ fontSize: 40 }}/></Grid>
                                         <Grid item xs={3} style={{ fontSize: "1.2rem" }}>67%</Grid>
                                         <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Humidity level</Grid>
                                     </Grid>
@@ -36,7 +40,7 @@ const Data = () => {
                             <Grid item xs={12}>
                                 <Card style={{ boxShadow: "none", backgroundColor: "#ADC5D6" }}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={3}>icon</Grid>
+                                        <Grid item xs={3}><AirIcon sx={{ fontSize: 40 }}/></Grid>
                                         <Grid item xs={3} style={{ fontSize: "1.2rem" }}>10 km/hr</Grid>
                                         <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Impact of Wind</Grid>
                                     </Grid>
@@ -45,7 +49,7 @@ const Data = () => {
                             <Grid item xs={12}>
                                 <Card style={{ boxShadow: "none", backgroundColor: "#F2E876" }}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={3}>icon</Grid>
+                                        <Grid item xs={3}><LightModeIcon sx={{ fontSize: 40 }}/></Grid>
                                         <Grid item xs={3} style={{ fontSize: "1.2rem" }}>Dim Sunlight</Grid>
                                         <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Impact of Sunlight</Grid>
                                     </Grid>
@@ -54,7 +58,7 @@ const Data = () => {
                             <Grid item xs={12}>
                                 <Card style={{ boxShadow: "none", backgroundColor: "#F0D257" }}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={3}>icon</Grid>
+                                        <Grid item xs={3}><DeviceThermostatIcon sx={{ fontSize: 40 }}/></Grid>
                                         <Grid item xs={3} style={{ fontSize: "1.2rem" }}>29°C</Grid>
                                         <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Tempertaure</Grid>
                                     </Grid>

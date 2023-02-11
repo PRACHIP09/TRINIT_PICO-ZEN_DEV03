@@ -41,7 +41,7 @@ function App() {
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>
       <Route path="/schemes" element={<><NavbarF/><Schemes/><StickyFooter/></>} />
-      <Route path="/prediction" element={<><NavbarF/><Prediction/><StickyFooter/></>} />
+      <Route path="/prediction" element={<><NavbarF/><SubmitForm/><StickyFooter/></>} />
       <Route path="/questions" element={<><NavbarF/><QuestionAns/><StickyFooter/></>} />
       <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><StickyFooter/></>} />
       <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><StickyFooter/></>}/>

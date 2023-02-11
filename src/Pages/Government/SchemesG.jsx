@@ -30,7 +30,7 @@ const validationSchema = yup.object({
 });
 
 const SchemesG = () => {
-
+  const token = localStorage.getItem("token")
   const icons1 = [
     {name:"Seedling",image:Seedling}
     ,{name:"Farming",image:Farming}
@@ -56,7 +56,7 @@ const SchemesG = () => {
       fetch("http://localhost:5500/api/scheme/new", {
         method: "POST",
         body: formData,
-        headers: { "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U2NjY2YTZmNDgwZGY4OTJhNGU2ZGIiLCJpYXQiOjE2NzYwNDM4ODJ9._mVWwb2nGwthYgM_egnb3-8SUPPJCjAwoMYqKxkMlXM` },
+        headers: { "Authorization": `Bearer ${token}` },
       })
         .then((result) => {
 
@@ -72,7 +72,7 @@ const SchemesG = () => {
   return (
     <div>
       <Grid item xs={12} style={{ fontSize: "1.5rem" , margin:"3vh 0vh"}}>
-        We Provide to you
+        
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
@@ -101,7 +101,7 @@ const SchemesG = () => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} style={{ textAlign: "left", paddingLeft: "5vh" }}>
+          <Grid item xs={12} md={6} style={{ textAlign: "left", paddingLeft: "5vh", paddingTop:"5vh" }}>
             <div style={{ fontSize: "1.5rem", marginBottom: "2vh" }}>
               Our Best Ongoing Schemes
             </div>
@@ -150,7 +150,7 @@ const SchemesG = () => {
             </li>
           </Grid>
           <Grid item xs={12} md={6}>
-            <div style={{ fontSize: "1.5rem" }}>
+            <div style={{ fontSize: "1.5rem", marginTop:"5vh" }}>
               Add Schema
             </div>
             <div>

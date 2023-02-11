@@ -1,10 +1,10 @@
-const Product = require('../models/product.js');
+const Raw = require('../models/raw.js');
 
-exports.createProduct = async (req, res) => {
+exports.createRaw = async (req, res) => {
     try {
 
 
-      const newProduct = new Product({
+      const newRaw = new Raw({
         ...req.body,
         // far_name:{
         //     type: String
@@ -33,10 +33,10 @@ exports.createProduct = async (req, res) => {
       
     
       
-        await newProduct.save()
+        await newRaw.save()
         res.status(201).json({
           success: true,
-          data: newProduct
+          data: newRaw
         })
       }catch(e){
         res.status(400).json({
@@ -46,13 +46,13 @@ exports.createProduct = async (req, res) => {
       }
 }
 
-exports.getProducts = async (req,res) => {
+exports.getRaws = async (req,res) => {
     try{
-        const getProduct = await Product.find({})
+        const getRaw = await Raw.find({})
 
         res.json({
             success: true,
-            data: getProduct
+            data: getRaw
            
         })
     } catch(e) {
@@ -62,23 +62,3 @@ exports.getProducts = async (req,res) => {
         })
     }
 }
-
-
-exports.deleteProduct = async (req, res) => {
-  try {
-      const currentProduct = await Product.findByIdAndDelete(req.body.id);
-      if (!currentProduct) {
-          res.status(404).json({
-              message: "Product not found!"
-          });
-      } else {
-           res.status(200).json({
-               message: "Product deleted!"
-          });
-      }
-  } catch (error) {
-      res.status(400).json({
-          message: error.message
-      });
-  }
-};

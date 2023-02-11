@@ -13,7 +13,7 @@ const {
 
 router.post('/new',[auth.verifyjwt,auth.userTypeFarmer], createProduct)
 router.get('/getAll',[auth.verifyjwt], getProducts)
-// router.delete('/delete',[auth.verifyjwt, auth.userTypeFarmer], deleteProduct)
+router.delete('/delete',[auth.verifyjwt, auth.userTypeFarmer], deleteProduct)
 
 
 const upload = multer({

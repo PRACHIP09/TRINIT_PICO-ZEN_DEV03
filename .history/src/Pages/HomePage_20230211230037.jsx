@@ -45,7 +45,7 @@ const HomePage = () => {
             <Grid item xs={6}>
               <Grid container spacing={2}>
                 <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
-               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth.They are an indispensable part of not only our daily lives but also our country's future.
+               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth. Without farmers, our food security and the stability of rural communities would be severely impacted, making them an indispensable part of not only our daily lives but also our country's future.
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
                               {/* <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }} >Connect with Farmers</Button> */}

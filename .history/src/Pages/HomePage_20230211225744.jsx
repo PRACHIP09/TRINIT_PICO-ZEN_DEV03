@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button,Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -18,21 +18,7 @@ const HomePage = () => {
     autoplay: true,
     autoplaySpeed: 10000,
   };
-  const wallp = [
-    {
-      name: wallpaper1, title: "Daily Life", text: "Farmers engage in a variety of activities related to the production of raw materials. These activities include land preparation, planting, fertilization, irrigation, pest control, and harvesting. Farmers must carefully manage these activities to ensure a high-quality crop and to maximize yields.",
-    },
-    {
-      name: wallpaper2, title: "Raw Materials", text: "Once the raw materials have been harvested, farmers often engage in further processing to create a finished product. This may involve cleaning, grading, and packaging the crop for sale. Farmers may also work with processors or manufacturers to create value-added products, such as juices or snacks, from their raw materials.",
-    },
-    {
-      name: wallpaper3, title: "Product", text: "The effects of government schemes on farmers can be significant. Government programs may provide financial support to farmers, such as subsidies or loans, to help them purchase inputs like seeds, fertilizer, and equipment. Government-sponsored extension services may also provide training and technical assistance to farmers, helping them to improve their farming practices and increase yields.",
-    },
-    {
-      name: wallpaper4, title: "Government Schmes & Questions asked", text: "Questions that are frequently asked by farmers include inquiries about the best practices for a specific crop, how to address pest problems, and information on available government support programs. They may also ask about market conditions and prices, as these factors can greatly impact their income and profitability. Additionally, farmers may seek advice on how to adopt new technologies or farming methods to increase efficiency and competitiveness in the market.",
-    },
-  ]
-  // const wallp = [wallpaper1, wallpaper2, wallpaper3, wallpaper4];
+  const wallp = [wallpaper1, wallpaper2, wallpaper3, wallpaper4];
   return (
     <div>
       <Grid container spacing={2}>
@@ -45,7 +31,7 @@ const HomePage = () => {
             <Grid item xs={6}>
               <Grid container spacing={2}>
                 <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
-               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth.They are an indispensable part of not only our daily lives but also our country's future.
+               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth. Without farmers, our food security and the stability of rural communities would be severely impacted, making them an indispensable part of not only our daily lives but also our country's future.
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
                               {/* <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }} >Connect with Farmers</Button> */}
@@ -87,10 +73,10 @@ const HomePage = () => {
           <Grid item xs={12}>
             <Grid container spacing={2}>
               <Grid item xs={8} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign: "right" }}>
-                Want to explore and fall in love with nature? Join us in our Journey.
+                Want to know more about the schemes ?
               </Grid>
               <Grid item xs={4} style={{ paddingLeft: "5vh", paddingTop: "9vh", textAlign: "left" }}>
-                        <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Contact Us</Button>
+              <Link to="/questions">                <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Send Your Doubts</Button></Link>
               </Grid>
             </Grid>
           </Grid>

@@ -1,15 +1,16 @@
 import React from 'react'
-import { Button,Grid } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import wallpaper1 from "../Images/wallpaper1.webp"
-import wallpaper2 from "../Images/wallpaper2.webp"
-import wallpaper3 from "../Images/wallpaper3.webp"
-import wallpaper4 from "../Images/wallpaper4.webp"
-import image from "../Images/farmer.png"
+import wallpaper1 from "../../Images/wallpaper1.webp"
+import wallpaper2 from "../../Images/wallpaper2.webp"
+import wallpaper3 from "../../Images/wallpaper3.webp"
+import wallpaper4 from "../../Images/wallpaper4.webp"
+import image from "../../Images/farmer.png"
 import { Link } from 'react-router-dom';
-const HomePage = () => {
+
+const HomePageF = () => {
   const settings = {
     infinite: true,
     speed: 5000,
@@ -32,12 +33,11 @@ const HomePage = () => {
       name: wallpaper4, title: "Government Schmes & Questions asked", text: "Questions that are frequently asked by farmers include inquiries about the best practices for a specific crop, how to address pest problems, and information on available government support programs. They may also ask about market conditions and prices, as these factors can greatly impact their income and profitability. Additionally, farmers may seek advice on how to adopt new technologies or farming methods to increase efficiency and competitiveness in the market.",
     },
   ]
-  // const wallp = [wallpaper1, wallpaper2, wallpaper3, wallpaper4];
+  //const wallp = [wallpaper1, wallpaper2, wallpaper3, wallpaper4];
   return (
     <div>
       <Grid container spacing={2}>
-    
-        <Grid item xs={12} style={{padding:"0vh 10vh"}} >
+        <Grid item xs={12}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
               <img src={image} style={{ width: "80%" }} />
@@ -45,16 +45,15 @@ const HomePage = () => {
             <Grid item xs={6}>
               <Grid container spacing={2}>
                 <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
-               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth.They are an indispensable part of not only our daily lives but also our country's future.
+                  Want help about which crops to grow? <br />No worries we have our new autonomous model to help you find the best solution
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
-                              {/* <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }} >Connect with Farmers</Button> */}
+                <Link to="/rawmaterials">                  <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }} >Connect with Farmers</Button></Link>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-
         <Grid item xs={12} style={{ padding: "0vh 10vh" }}>
           {/*phoo*/}
           <Slider {...settings}>
@@ -87,10 +86,10 @@ const HomePage = () => {
           <Grid item xs={12}>
             <Grid container spacing={2}>
               <Grid item xs={8} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign: "right" }}>
-                Want to explore and fall in love with nature? Join us in our Journey.
+                Want to know more about the schemes ?
               </Grid>
               <Grid item xs={4} style={{ paddingLeft: "5vh", paddingTop: "9vh", textAlign: "left" }}>
-                        <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Contact Us</Button>
+              <Link to="/questions">                <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Send Your Doubts</Button></Link>
               </Grid>
             </Grid>
           </Grid>
@@ -101,4 +100,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default HomePageF

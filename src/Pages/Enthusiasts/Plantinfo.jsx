@@ -1,10 +1,11 @@
-import { Card, Grid, Button, Checkbox , Modal} from '@mui/material'
+import { Card, Grid, Button, Checkbox, Modal } from '@mui/material'
 import React from 'react'
 import image from '../../Images/login.webp'
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Info from './Info';
 import Data from './Data';
+import plants from "../../Images/party.gif"
 const Plantinfo = () => {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const [open, setOpen] = React.useState(false);
@@ -16,19 +17,28 @@ const Plantinfo = () => {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          Title
+        <Grid item xs={12} style={{ fontSize: "2.5rem" }}>
+          A beautiful plant is like , <br /> having friend aound the house
         </Grid>
         <Grid item xs={12}>
-          Description
+          <img src={plants} style={{width:"35vh" , height:"25vh"}} />
         </Grid>
-        <Grid item xs={6} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
-          <div onClick={handleOpen}>Add New Plant Today</div>
+        <Grid item xs={12} style={{ fontSize: "1.5rem", padding: "2vh 20vh" }}>
+          The second best thing is bragging about it on social media. <br/>The plant parent community is one of the most supportive, nourishing, and uplifting groups you will find online.
         </Grid>
-        <Grid item xs={6} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
-          <div onClick={handleOpenData}>Review Plant Status</div>
+        <Grid item xs={6} style={{ textAlign: "center" }}>
+          <Button onClick={handleOpen} style={{
+            backgroundColor: "#59D7B5", width: "60%", fontSize: "1.1rem",
+            padding: "1vh 0vh", color: "black", fontWeight: "700"
+          }}>Add New Plant Details</Button>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={6} style={{ textAlign: "center" }}>
+          <Button onClick={handleOpenData} style={{
+            backgroundColor: "#59D7B5", width: "60%", fontSize: "1.1rem",
+            padding: "1vh 0vh", color: "black", fontWeight: "700"
+          }}>Review Plant Status</Button>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} style={{ padding: "3vh 3vh" }}>
           <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>

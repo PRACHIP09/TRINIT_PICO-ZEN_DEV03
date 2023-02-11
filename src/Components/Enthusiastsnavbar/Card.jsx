@@ -6,7 +6,7 @@ const Card1 = ({ amount, img, checkoutHandler }) => {
         <div>
             <img src={img} className="hide-feature"/>
             <div className="hide-feature">₹{amount}</div>
-            <Button onClick={() => checkoutHandler(amount)}>Donate</Button>
+            <Button onClick={() => checkoutHandler(amount)} style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate</Button>
         </div>
     )
 }

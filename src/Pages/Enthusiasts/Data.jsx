@@ -25,38 +25,38 @@ const Data = () => {
                     <Grid item xs={6}>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
-                                <Card style={{ boxShadow: "none", backgroundColor: "yellow" }}>
+                                <Card style={{ boxShadow: "none", backgroundColor: "#A0D9F2" }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={3}>icon</Grid>
-                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>78%</Grid>
-                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Water level</Grid>
+                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>67%</Grid>
+                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Humidity level</Grid>
                                     </Grid>
                                 </Card>
                             </Grid>
                             <Grid item xs={12}>
-                                <Card style={{ boxShadow: "none", backgroundColor: "yellow" }}>
+                                <Card style={{ boxShadow: "none", backgroundColor: "#ADC5D6" }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={3}>icon</Grid>
-                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>78%</Grid>
-                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Water level</Grid>
+                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>10 km/hr</Grid>
+                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Impact of Wind</Grid>
                                     </Grid>
                                 </Card>
                             </Grid>
                             <Grid item xs={12}>
-                                <Card style={{ boxShadow: "none", backgroundColor: "yellow" }}>
+                                <Card style={{ boxShadow: "none", backgroundColor: "#F2E876" }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={3}>icon</Grid>
-                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>78%</Grid>
-                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Water level</Grid>
+                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>Dim Sunlight</Grid>
+                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Impact of Sunlight</Grid>
                                     </Grid>
                                 </Card>
                             </Grid>
                             <Grid item xs={12}>
-                                <Card style={{ boxShadow: "none", backgroundColor: "yellow" }}>
+                                <Card style={{ boxShadow: "none", backgroundColor: "#F0D257" }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={3}>icon</Grid>
-                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>78%</Grid>
-                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Water level</Grid>
+                                        <Grid item xs={3} style={{ fontSize: "1.2rem" }}>29°C</Grid>
+                                        <Grid item xs={6} style={{ fontSize: "1.2rem" }}>Tempertaure</Grid>
                                     </Grid>
                                 </Card>
                             </Grid>
@@ -69,8 +69,8 @@ const Data = () => {
                                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                                 datasets: [
                                     {
-                                        label: 'GitHub Commits',
-                                        backgroundColor: '#f87979',
+                                        label: 'Monthly Water Level',
+                                        backgroundColor: '#A0D9F2',
                                         data: [40, 20, 12, 39, 10, 40, 39, 80, 40],
                                     },
                                 ],
@@ -83,11 +83,11 @@ const Data = () => {
                             style={{ width: "50vh", height: "50vh", backgroundColor: "transparent", borderColor: "transparent" }}
                             type="doughnut"
                             data={{
-                                labels: ['Positive Comments', 'Negative Comments', 'Hashtags', 'Reviews', 'Likes'],
+                                labels: ['Humidity Level', 'Wind velocity', 'Impact of Sunlight', 'Amount of Nutrients', 'Surrounding Temperature'],
                                 datasets: [
                                     {
-                                        data: [790, 220, 610, 320, 544],
-                                        backgroundColor: ['#D98100', '#E1B200', '#ABA597', '#4B85A8', '#182139'],
+                                        data: [790, 220, 610, 520, 344],
+                                        backgroundColor: ['#A0D9F2', '#ADC5D6', '#F2E876', '#BEA479', '#F0D257'],
                                     },
                                 ],
                             }}
@@ -98,34 +98,34 @@ const Data = () => {
                             type="radar"
                             data={{
                                 labels: [
-                                    'Eating',
-                                    'Drinking',
-                                    'Sleeping',
-                                    'Designing',
-                                    'Coding',
-                                    'Cycling',
-                                    'Running',
+                                    'Nitrogen',
+                                    'Phosphorus',
+                                    'Potassium',
+                                    'Organic Carbon',
+                                    'Zinc',
+                                    'Copper',
+                                    'Calcium Carbonate',
                                 ],
                                 datasets: [
                                     {
-                                        label: 'My First dataset',
-                                        backgroundColor: 'rgba(220, 220, 220, 0.2)',
-                                        borderColor: 'rgba(220, 220, 220, 1)',
-                                        pointBackgroundColor: 'rgba(220, 220, 220, 1)',
+                                        label: 'Nutrients in Soil in Month of December',
+                                        backgroundColor: 'rgba(190, 164, 121, 0.2)',
+                                        borderColor: 'rgba(190, 164, 121, 1)',
+                                        pointBackgroundColor: 'rgba(190, 164, 121, 1)',
                                         pointBorderColor: '#fff',
                                         pointHighlightFill: '#fff',
-                                        pointHighlightStroke: 'rgba(220, 220, 220, 1)',
-                                        data: [65, 59, 90, 81, 56, 55, 40],
+                                        pointHighlightStroke: 'rgba(190, 164, 121, 1)',
+                                        data: [10, 9, 8, 1, 0.5, 0.8, 2],
                                     },
                                     {
-                                        label: 'My Second dataset',
-                                        backgroundColor: 'rgba(151, 187, 205, 0.2)',
-                                        borderColor: 'rgba(151, 187, 205, 1)',
-                                        pointBackgroundColor: 'rgba(151, 187, 205, 1)',
+                                        label: 'Nutrients in Soil in Month of January',
+                                        backgroundColor: 'rgba(44, 18, 8, 0.2)',
+                                        borderColor: 'rgba(44, 18, 8, 1)',
+                                        pointBackgroundColor: 'rgba(44, 18, 8, 1)',
                                         pointBorderColor: '#fff',
                                         pointHighlightFill: '#fff',
-                                        pointHighlightStroke: 'rgba(151, 187, 205, 1)',
-                                        data: [28, 48, 40, 19, 96, 27, 100],
+                                        pointHighlightStroke: 'rgba(44, 18, 8, 1)',
+                                        data: [12, 10, 7, 2, 1.5, 1.2, 3.6],
                                     },
                                 ],
                             }}

@@ -5,63 +5,54 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import image from '../../Images/login.webp'
 import { useTheme } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+import image from "../../Images/removebg.png"
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 const Donation = () => {
 
 
-    const checkoutHandler = async (amount) => {
+  const checkoutHandler = async (amount) => {
 
-        const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
+    const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
 
-        const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
-            amount
-        })
+    const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+      amount
+    })
 
-        const options = {
-            key,
-            amount: order.amount,
-            currency: "INR",
-            order_id: order.id,
-            callback_url: "http://localhost:4000/api/paymentverification",
-            prefill: {
-                name: "Shubham Shah",
-                email: "shahshubham024@gmail.com",
-                contact: "7045707681"
-            },
-            notes: {
-                "address": "Razorpay Corporate Office"
-            },
-            theme: {
-                "color": "#121212"
-            }
-        };
-        const razor = new window.Razorpay(options);
-        razor.open();
-    }
-    const theme = useTheme();
-    return (
-      
+    const options = {
+      key,
+      amount: order.amount,
+      currency: "INR",
+      order_id: order.id,
+      callback_url: "http://localhost:4000/api/paymentverification",
+      prefill: {
+        name: "Shubham Shah",
+        email: "shahshubham024@gmail.com",
+        contact: "7045707681"
+      },
+      notes: {
+        "address": "Razorpay Corporate Office"
+      },
+      theme: {
+        "color": "#121212"
+      }
+    };
+    const razor = new window.Razorpay(options);
+    razor.open();
+  }
+  const theme = useTheme();
+  return (
+
     <Box sx={{ flexGrow: 1 }}>
-            {/* <Card sx={{ display: 'flex' }}>
+      {/* <Card sx={{ display: 'flex' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
@@ -78,37 +69,31 @@ const Donation = () => {
     </Card>
         
          */}
-            <Grid container spacing={7}>
-        <Grid container
-  spacing={0}
-  direction="column"
-  alignItems="center"
-  justifyContent="center"
-  style={{ minHeight: '100vh' }}>
-          <img src={image} style={{ height: "70%", width: "40%" }} />
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <img src={image} style={{ width: "90%" ,borderRadius:"5vh" }} />
         </Grid>
-        <Grid container
-  spacing={0}
-  direction="column"
-  alignItems="center"
-  justifyContent="center"
-//   font-size="1000vw" 
-  style={{ minHeight: '100vh'}}
-   >
-        <Typography component="div" variant="h3">
-          Together we can
-          </Typography>
-          <Typography variant="h4" color="text.secondary" component="div">
-          create a brighter future for all
-          </Typography>
-          <br />
-                <Card1 amount={5000} checkoutHandler={checkoutHandler} />
-        
+        <Grid item xs={6}>
+          <div style={{ fontSize: "3rem" , marginTop:"10vh"}}>
+            Together we can <br />
+            <span style={{fontSize:"3rem", fontFamily:"Tangerine"}} color="#1987695" component="div">
+              create a brighter future for all
+            </span>
+          </div>
+          <div style={{ fontSize: "3rem"}}>
+            Come, Let us all <br />
+            <span style={{fontSize:"3rem", fontFamily:"Tangerine"}} color="#59D7B5" component="div">
+              Donate Green Today
+            </span>
+          </div>
+          <div style={{marginTop:"5vh"}}>
+            <Card1 amount={5000} checkoutHandler={checkoutHandler} />
+          </div>
         </Grid>
       </Grid>
-    </Box>
-    
-    )
+    </Box >
+
+  )
 }
 
 export default Donation

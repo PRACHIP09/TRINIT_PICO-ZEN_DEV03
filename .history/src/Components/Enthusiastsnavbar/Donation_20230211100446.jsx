@@ -61,7 +61,7 @@ const Donation = () => {
     return (
       
     <Box sx={{ flexGrow: 1 }}>
-            {/* <Card sx={{ display: 'flex' }}>
+            <Card sx={{ display: 'flex' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
@@ -74,10 +74,15 @@ const Donation = () => {
         </CardContent>
       </Box>  
       <img src={image} style={{ height: "70%", width: "40%" }} />
-     
+      <CardMedia
+        component="img"
+        sx={{ width: 151 }}
+        image="/static/images/cards/live-from-space.jpg"
+        alt="Live from space album cover"
+      />
     </Card>
         
-         */}
+        
             <Grid container spacing={7}>
         <Grid container
   spacing={0}
@@ -95,15 +100,8 @@ const Donation = () => {
 //   font-size="1000vw" 
   style={{ minHeight: '100vh'}}
    >
-        <Typography component="div" variant="h3">
-          Together we can
-          </Typography>
-          <Typography variant="h4" color="text.secondary" component="div">
-          create a brighter future for all
-          </Typography>
-          <br />
-                <Card1 amount={5000} checkoutHandler={checkoutHandler} />
-        
+         Together we can create a brighter future for all
+      <Card1 amount={5000} checkoutHandler={checkoutHandler} />
         </Grid>
       </Grid>
     </Box>

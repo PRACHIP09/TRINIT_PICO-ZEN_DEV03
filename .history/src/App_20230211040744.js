@@ -7,7 +7,6 @@ import Contact from './Pages/Contact';
 import Navbar from './Components/ChatBot/Navbar';
 import Footer from './Components/ChatBot/Footer';
 import NavbarF from './Components/Farmernavbar/NavbarF';
-import StickyFooter from './Components/Farmernavbar/StickyFooter'
 import Plants from './Pages/Farmers/Plants';
 import Schemes from './Pages/Farmers/Schemes';
 import Rawmaterial from './Pages/Farmers/Rawmaterial';
@@ -35,23 +34,23 @@ function App() {
       <Route path="/" element={<><Navbar/><HomePage/><Footer/></>}/>
       <Route path="/signup" element={<Signup/>} />
       <Route path="/contactus" element={<><Navbar/><Contact/><Footer/></>} />
-      <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
-      <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>
-      <Route path="/schemes" element={<><NavbarF/><Schemes/><StickyFooter/></>} />
-      <Route path="/questions" element={<><NavbarF/><QuestionAns/><StickyFooter/></>} />
-      <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><StickyFooter/></>} />
-      <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><StickyFooter/></>}/>
-      <Route path="/products" element={<><NavbarE/><PlantsProduct/><StickyFooter/></>}/>
-      <Route path="/schemes" element={<><NavbarE/><Schemes/><StickyFooter/></>} />
-      <Route path="/cart-enthusiast" element={<><NavbarE/><CartsE/><StickyFooter/></>} />
-      <Route path="/plants-information" element={<><NavbarE/><Plantinfo/><StickyFooter/></>} />
-      <Route path="/home-govn" element={<><NavbarG/><HomepageG/><StickyFooter/></>}/>
-      <Route path="/schemes-govn" element={<><NavbarG/><Display/><StickyFooter/></>}/>
-      <Route path="/add-schemes" element={<><NavbarG/><SchemesG/><StickyFooter/></>} />
-      <Route path="/doubts" element={<><NavbarG/><Doubts/><StickyFooter/></>} />
-      <Route path="/donate" element={<><NavbarE/><Donation/><StickyFooter/></>} />
-      <Route path="/search" element={<><Navbar/><Search/><StickyFooter/></>} />
-      <Route path="/blog" element={<><Navbar/><Blog/><StickyFooter/></>} />
+      <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><Footer/></>}/>
+      <Route path="/products-to-sell" element={<><NavbarF/><Plants/><Footer/></>}/>
+      <Route path="/schemes" element={<><NavbarF/><Schemes/><Footer/></>} />
+      <Route path="/questions" element={<><NavbarF/><QuestionAns/><Footer/></>} />
+      <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><Footer/></>} />
+      <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><Footer/></>}/>
+      <Route path="/products" element={<><NavbarE/><PlantsProduct/><Footer/></>}/>
+      <Route path="/schemes" element={<><NavbarE/><Schemes/><Footer/></>} />
+      <Route path="/cart-enthusiast" element={<><NavbarE/><CartsE/><Footer/></>} />
+      <Route path="/plants-information" element={<><NavbarE/><Plantinfo/><Footer/></>} />
+      <Route path="/home-govn" element={<><NavbarG/><HomepageG/><Footer/></>}/>
+      <Route path="/schemes-govn" element={<><NavbarG/><Display/><Footer/></>}/>
+      <Route path="/add-schemes" element={<><NavbarG/><SchemesG/><Footer/></>} />
+      <Route path="/doubts" element={<><NavbarG/><Doubts/><Footer/></>} />
+      <Route path="/donate" element={<><NavbarE/><Donation/><Footer/></>} />
+      <Route path="/search" element={<><Navbar/><Search/><Footer/></>} />
+      <Route path="/blog" element={<><Navbar/><Blog/><Footer/></>} />
     </Routes>
   );
 }

@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import styled from "@emotion/styled";
-// const Container = styled.div`margin-top: 150px;`;
 
 const Prediction = () => {
-    
-  const [formData, setFormData] = useState({});
-
+  const [formData, setFormData] = useState([]);
+  formData.append("nitrogen",'40')
+  formData.append("phosphorous",'20')
+  formData.append("pottasium",'4')
+  formData.append("ph",'4.5')
+  formData.append("rainfall",'59')
+  formData.append("state",'Rajasthan')
+  formData.append("city",'Ajmer')
   const handleChange = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
     });
-    // console.log(formData)
+    console.log(setFormData)
   };
 
   const handleSubmit = (event) => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import styled from "@emotion/styled";
-// const Container = styled.div`margin-top: 150px;`;
+import styled from "@emotion/styled";
+const Container = styled.div`margin-top: 150px;`;
 
 const Prediction = () => {
     

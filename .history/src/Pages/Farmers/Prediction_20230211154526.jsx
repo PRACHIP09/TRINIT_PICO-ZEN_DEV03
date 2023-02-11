@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import styled from "@emotion/styled";
-// const Container = styled.div`margin-top: 150px;`;
 
 const Prediction = () => {
-    
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    nitrogen: '',
+    phosphorus: '',
+    potassium: '',
+    rainfall: '',
+    ph: '',
+    state: '',
+    city: '',
+  });
 
   const handleChange = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
     });
-    // console.log(formData)
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // for (var pair of formData.entries()) {
-    //     console.log(pair[0]+","+pair[1])
-    //   }
     const headers = {
         "content-type": "application/json",
         // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
         'Access-Control-Allow-Origin':'*',
       };
-
+      
     axios
       .post('http://127.0.0.1:5000/crop-predict', formData,{headers})
       .then((res) => console.log(res.data))

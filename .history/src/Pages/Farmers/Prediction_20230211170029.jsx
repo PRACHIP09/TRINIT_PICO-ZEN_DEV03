@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import styled from "@emotion/styled";
-// const Container = styled.div`margin-top: 150px;`;
 
 const Prediction = () => {
-    
   const [formData, setFormData] = useState({});
 
   const handleChange = (event) => {

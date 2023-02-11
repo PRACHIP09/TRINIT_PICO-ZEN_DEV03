@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css';
-import { Grid , Drawer} from '@mui/material';
+import { Grid, Drawer } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import Modal from "react-modal";
@@ -21,25 +21,24 @@ const Navbar = () => {
   };
   return (
     <div>
-      <Grid container spacing={2} sx={{padding: "3vh 0vh"}}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={8} className="webnavbar">
+      <Grid container spacing={2} sx={{ padding: "3vh 0vh", textAlign: "center" }}>
+        <Grid item xs={12} className="webnavbar">
           <Grid container spacing={2}
-            sx={{ fontSize: "1.35rem", textDecoration: "none" , textAlign:"right"}}>
-            <Grid item xs={3}>
+            sx={{ fontSize: "1.35rem", textDecoration: "none", textAlign: "center", marginLeft:"60vh"}}>
+            <Grid item xs={1}>
               <NavLink exact activeClassName="active" to='/' className="indicator">HOME</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/search' className="indicator">SEARCH</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/blog' className="indicator">BLOG</NavLink>
             </Grid>
-            <Grid item xs={2}>
-              <NavLink activeClassName="active" to='/contactus' className="indicator">CONTACT US</NavLink>
+            <Grid item xs={1}>
+              <NavLink activeClassName="active" to='/contactus' className="indicator">CONTACT</NavLink>
             </Grid>
-            <Grid item xs={2}>
-              <NavLink activeClassName="active" to='/login' className="indicator">LOGIN/SIGNUP</NavLink>
+            <Grid item xs={1}>
+              <NavLink activeClassName="active" to='/login' className="indicator">LOGIN</NavLink>
             </Grid>
           </Grid>
         </Grid>

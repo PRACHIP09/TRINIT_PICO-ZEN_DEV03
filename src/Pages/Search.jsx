@@ -35,14 +35,15 @@ const Search = () => {
     return (
         <div>
             <Grid container spacing={2} padding={2}>
-                <Grid item xs={12}>
-                    Title
+                <Grid item xs={12} style={{ fontSize: "1.5rem" }}>
+                    The best time to plant a tree was 25 years ago <br />
+                    The second best day to plant a tree is Today
                 </Grid>
-                <Grid item xs={12}>
-                    Description
+                <Grid item xs={12} style={{fontSize:"1.2rem", padding:"2vh 5vh"}}>
+                    A plant comprises more than 95% water; every tree we find around us was once a plant many years ago. It’s no surprise that they provide sustenance to living beings; without plants, it would be impossible to have a life on earth. There are three main types of plants – conifers, ferns, and flowering plants. Flowering plants are described as those species that grow leaves such as roses, tulips, dandelions, sunflowers, etc. Conifers are evergreens that grow tall and sometimes have needles instead of leaves. Ferns are non-flowering plants that don’t have leaves or flowers. Blue-green algae originated 3 billion years ago and were known to be the first plants on this earth.
                 </Grid>
                 <Grid item xs={12} style={{ fontSize: "3vh", textAlign: "center", marginTop: "1.75vh" }}>
-                    Curious to know about Plants ? <br />Post your question and learn about it today from all our users around the globe
+                    Curious to know about Crops ? <br />Post your question and learn about it today from all our users around the globe
                 </Grid>
                 <Grid item xs={12}>
                     <div>
@@ -63,7 +64,7 @@ const Search = () => {
                                 </Grid>
                                 <Grid item xs={4}>
                                     <Button color="success" variant="contained" type="submit"
-                                        sx={{ width: "100%", fontSize: "1.25rem", height:"3.5rem"}}>
+                                        sx={{ width: "100%", fontSize: "1.25rem", height: "3.5rem" }}>
                                         Submit
                                     </Button>
                                 </Grid>

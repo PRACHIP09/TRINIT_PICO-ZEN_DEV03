@@ -24,23 +24,23 @@ const NavbarE = () => {
       <Grid container spacing={2} sx={{padding: "3vh 0vh"}}>
         <Grid item xs={12} className="webnavbar">
           <Grid container spacing={2}
-            sx={{ fontSize: "1.35rem", textDecoration: "none" }}>
-            <Grid item xs={2}>
+            sx={{ fontSize: "1.35rem", textDecoration: "none", marginLeft:"50vh" }}>
+            <Grid item xs={1}>
               <NavLink exact activeClassName="active" to='/home-enthusiast' className="indicator">HOME</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/products' className="indicator">PRODUCTS</NavLink>
             </Grid>
             <Grid item xs={1}>
               <NavLink activeClassName="active" to='/cart-enthusiast' className="indicator">CART</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/plants-information' className="indicator">PLANTS</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/donate' className="indicator">DONATE</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/' className="indicator">LOGUT</NavLink>
             </Grid>
             <Grid item xs={1} style={{ cursor: "pointer" }}

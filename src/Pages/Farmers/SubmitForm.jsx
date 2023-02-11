@@ -20,14 +20,6 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // const formData = new FormData();
-    // formData.append("nitrogen",'40')
-    // formData.append("phosphorous",'20')
-    // formData.append("pottasium",'4')
-    // formData.append("ph",'4.5')
-    // formData.append("rainfall",'59')
-    // formData.append("state",'Rajasthan')
-    // formData.append("city",'Ajmer')
     const headers = {
       "content-type": "application/json",
       // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
@@ -52,10 +44,7 @@ export default function SignIn() {
   };
 
   return (
-       
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
+    <div style={{padding:"0vh 60vh"}}>
         <Box
           sx={{
             marginTop: 8,
@@ -151,8 +140,6 @@ export default function SignIn() {
       
           </Box>
         </Box>
-
-      </Container>
-    </ThemeProvider>
+        </div>
   );
 }

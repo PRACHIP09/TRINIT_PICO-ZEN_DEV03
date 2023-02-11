@@ -22,23 +22,22 @@ const NavbarG = () => {
   return (
     <div>
       <Grid container spacing={2} sx={{padding: "3vh 0vh"}}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={8} className="webnavbar">
+        <Grid item xs={12} className="webnavbar">
           <Grid container spacing={2}
-            sx={{ fontSize: "1.35rem", textDecoration: "none" }}>
-            <Grid item xs={2}>
+            sx={{ fontSize: "1.35rem", textDecoration: "none" , marginLeft:"50vh"}}>
+            <Grid item xs={1}>
               <NavLink exact activeClassName="active" to='/home-govn' className="indicator">HOME</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/schemes-govn' className="indicator">SCHEMES</NavLink>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={2}>
               <NavLink activeClassName="active" to='/add-schemes' className="indicator">ADD SCHEMES</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/doubts' className="indicator">DOUBTS</NavLink>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/' className="indicator">LOGOUT</NavLink>
             </Grid>
           </Grid>

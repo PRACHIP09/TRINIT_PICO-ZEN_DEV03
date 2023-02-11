@@ -6,10 +6,14 @@ import {
 import React, { useState } from 'react'
 import { useFormik } from "formik";
 import * as yup from 'yup';
-import { Link } from 'react-router-dom';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import IconButton from '@mui/material/IconButton';
+import Seedling from "../../Images/seedling.png"
+import Harvest from "../../Images/harvest.png"
+import Gardening from "../../Images/hydroponic.png"
+import Agriculture from "../../Images/agriculture.png"
+import Vegetation from "../../Images/vegetation.png"
+import Farming from "../../Images/field.png"
+
+
 const validationSchema = yup.object({
   name: yup
     .string('Enter your Scheme Name')
@@ -26,6 +30,14 @@ const validationSchema = yup.object({
 });
 
 const SchemesG = () => {
+
+  const icons1 = [
+    {name:"Seedling",image:Seedling}
+    ,{name:"Farming",image:Farming}
+    ,{name:"Harvest",image:Harvest}
+    ,{name:"Gardening",image:Gardening}
+    ,{name:"Agriculture",image:Agriculture}
+    ,{name:"Vegetation",image:Vegetation}]
 
   const formik = useFormik({
     initialValues: {
@@ -59,67 +71,82 @@ const SchemesG = () => {
 
   return (
     <div>
-      <Grid item xs={12} style={{fontSize:"1.5rem"}}>
+      <Grid item xs={12} style={{ fontSize: "1.5rem" , margin:"3vh 0vh"}}>
         We Provide to you
       </Grid>
       <Grid item xs={12}>
-
+        <Grid container spacing={2}>
+          {icons1.map((item) => {
+            return (
+              <Grid item xs={2}>
+                <Grid container spacing={1}>
+                  <Grid item xs={12}>
+                    <img src={item.image} style={{width:"10vh", height:"10vh"}}/>
+                  </Grid>
+                  <Grid item xs={12}>
+                    {item.name}
+                  </Grid>
+                </Grid>
+              </Grid>
+            )
+          })}
+        </Grid>
       </Grid>
-      <Grid item xs={12} style={{fontSize:"1.5rem"}}>
+      {/*<Grid item xs={12} style={{ fontSize: "1.5rem" }}>
         Our Sponsers
-      </Grid>
-      
+      </Grid>*/}
+
       <Grid item xs={12}>
-        
+
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} style={{textAlign:"left" , paddingLeft:"5vh"}}>
-            <div style={{fontSize:"1.5rem", marginBottom:"2vh"}}>
+          <Grid item xs={12} md={6} style={{ textAlign: "left", paddingLeft: "5vh" }}>
+            <div style={{ fontSize: "1.5rem", marginBottom: "2vh" }}>
               Our Best Ongoing Schemes
             </div>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Ongoing</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>New</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Ongoing</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>New</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Agricultural</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Agricultural</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
-            <div style={{fontSize:"1.5rem", marginBottom:"2vh"}}>
-              Our Best Ongoing Schemes
+            <div style={{ fontSize: "1.5rem", marginBottom: "2vh" }}>
+              Our UpComing Schemes
             </div>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Ongoing</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>New</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Ongoing</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>New</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Agricultural</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Agricultural</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
-            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
-              Scheme 1 
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
-              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
+              Scheme 1
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
             </li>
           </Grid>
           <Grid item xs={12} md={6}>

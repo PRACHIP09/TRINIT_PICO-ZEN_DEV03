@@ -28,7 +28,7 @@ const Display = () => {
     return (
         <div>
             <Grid container spacing={2}>
-                <Grid item xs={6} style={{ paddingLeft: "5vh" }}>
+                <Grid item xs={6} style={{ paddingLeft: "5vh",paddingTop:"5vh" }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} style={{ fontSize: "2.5rem", textAlign: "left" }}>
                             Feel Better about knowing more about Government Schemes

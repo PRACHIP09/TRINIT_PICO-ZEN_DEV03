@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import axios from 'axios'
+
 
 const theme = createTheme();
 
@@ -20,39 +20,13 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // const formData = new FormData();
-    // formData.append("nitrogen",'40')
-    // formData.append("phosphorous",'20')
-    // formData.append("pottasium",'4')
-    // formData.append("ph",'4.5')
-    // formData.append("rainfall",'59')
-    // formData.append("state",'Rajasthan')
-    // formData.append("city",'Ajmer')
-    const headers = {
-      "content-type": "application/json",
-      // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
-      'Access-Control-Allow-Origin':'*',
-    };
-    axios
-    .post('http://127.0.0.1:5000/crop-predict',data,{headers})
-    .then((res) => console.log(res.data))
-    .catch((err) => console.error(err));
-
-  
-    console.log(data);
     console.log({
-      nitrogen: data.get('nitrogen'),
-      phosphorous: data.get('phosphorous'),
-      pottasium: data.get('pottasium'),
-      ph: data.get('ph'),
-      rainfall: data.get('rainfall'),
-      state: data.get('state'),
-      city: data.get('city'),
+      email: data.get('email'),
+      password: data.get('password'),
     });
   };
 
   return (
-       
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -66,78 +40,78 @@ export default function SignIn() {
         >
           
           <Typography component="h1" variant="h5">
-            What Crop to Grow? 
+            Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
               fullWidth
-              id="nitrogen"
+              id="email"
               label="Nitrogen"
-              name="nitrogen"
-              // placeholder="Email"
-              // autoComplete="email"
+              name="email"
+              placeholder="Email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="phosphorous"
+              id="email"
               label="Phosphorous"
-              name="phosphorous"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="pottasium"
+              id="email"
               label="Pottasium"
-              name="pottasium"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="ph"
+              id="email"
               label="PH value of soil"
-              name="ph"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="rainfall"
+              id="email"
               label="Rainfall in mm"
-              name="rainfall"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="state"
+              id="email"
               label="State"
-              name="state"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              id="city"
+              id="email"
               label="City"
-              name="city"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <Button

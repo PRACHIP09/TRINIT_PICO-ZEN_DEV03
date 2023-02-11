@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import axios from 'axios'
+
 
 const theme = createTheme();
 
@@ -20,25 +20,6 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // const formData = new FormData();
-    // formData.append("nitrogen",'40')
-    // formData.append("phosphorous",'20')
-    // formData.append("pottasium",'4')
-    // formData.append("ph",'4.5')
-    // formData.append("rainfall",'59')
-    // formData.append("state",'Rajasthan')
-    // formData.append("city",'Ajmer')
-    const headers = {
-      "content-type": "application/json",
-      // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
-      'Access-Control-Allow-Origin':'*',
-    };
-    axios
-    .post('http://127.0.0.1:5000/crop-predict',data,{headers})
-    .then((res) => console.log(res.data))
-    .catch((err) => console.error(err));
-
-  
     console.log(data);
     console.log({
       nitrogen: data.get('nitrogen'),
@@ -52,7 +33,6 @@ export default function SignIn() {
   };
 
   return (
-       
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -75,9 +55,9 @@ export default function SignIn() {
               fullWidth
               id="nitrogen"
               label="Nitrogen"
-              name="nitrogen"
-              // placeholder="Email"
-              // autoComplete="email"
+              name="email"
+              placeholder="Email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -86,8 +66,8 @@ export default function SignIn() {
               fullWidth
               id="phosphorous"
               label="Phosphorous"
-              name="phosphorous"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -96,8 +76,8 @@ export default function SignIn() {
               fullWidth
               id="pottasium"
               label="Pottasium"
-              name="pottasium"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -106,8 +86,8 @@ export default function SignIn() {
               fullWidth
               id="ph"
               label="PH value of soil"
-              name="ph"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -116,8 +96,8 @@ export default function SignIn() {
               fullWidth
               id="rainfall"
               label="Rainfall in mm"
-              name="rainfall"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -126,8 +106,8 @@ export default function SignIn() {
               fullWidth
               id="state"
               label="State"
-              name="state"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <TextField
@@ -136,8 +116,8 @@ export default function SignIn() {
               fullWidth
               id="city"
               label="City"
-              name="city"
-              // autoComplete="email"
+              name="email"
+              autoComplete="email"
               autoFocus
             />
             <Button

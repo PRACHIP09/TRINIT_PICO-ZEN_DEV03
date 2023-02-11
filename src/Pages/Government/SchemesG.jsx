@@ -36,31 +36,91 @@ const SchemesG = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      const formData = new FormData();
+      formData.append("donation", values.name);
+      formData.append("know_more", values.link);
+      formData.append("desc", values.desc);
+      console.log(FormData)
+      fetch("http://localhost:5500/api/scheme/new", {
+        method: "POST",
+        body: formData,
+        headers: { "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U2NjY2YTZmNDgwZGY4OTJhNGU2ZGIiLCJpYXQiOjE2NzYwNDM4ODJ9._mVWwb2nGwthYgM_egnb3-8SUPPJCjAwoMYqKxkMlXM` },
+      })
+        .then((result) => {
+
+          console.log(result);
+        })
+        .catch(() => {
+          alert('Error in the Code');
+        });
     },
   });
 
-  const [showPassword, setShowPassword] = useState(false);
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
   return (
     <div>
-      <Grid item xs={12}>
-        Title
+      <Grid item xs={12} style={{fontSize:"1.5rem"}}>
+        We Provide to you
       </Grid>
       <Grid item xs={12}>
-        About Schemes
+
+      </Grid>
+      <Grid item xs={12} style={{fontSize:"1.5rem"}}>
+        Our Sponsers
+      </Grid>
+      
+      <Grid item xs={12}>
+        
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <div>
-              List of Ongoing schemes
+          <Grid item xs={12} md={6} style={{textAlign:"left" , paddingLeft:"5vh"}}>
+            <div style={{fontSize:"1.5rem", marginBottom:"2vh"}}>
+              Our Best Ongoing Schemes
             </div>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Ongoing</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>New</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Agricultural</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
+            <div style={{fontSize:"1.5rem", marginBottom:"2vh"}}>
+              Our Best Ongoing Schemes
+            </div>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Ongoing</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>New</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Agricultural</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
+            <li style={{fontSize:"1.3rem", marginBottom:"2vh"}}>
+              Scheme 1 
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+              <Button style={{backgroundColor:"green" ,color:"white", borderRadius:"5vh", height:"3vh", padding:"0vh 1vh", marginLeft:"2vh"}}>Here</Button>
+            </li>
           </Grid>
           <Grid item xs={12} md={6}>
             <div style={{ fontSize: "1.5rem" }}>
@@ -124,7 +184,7 @@ const SchemesG = () => {
                 </Grid>
                 <Button color="success" variant="contained" type="submit"
                   sx={{ width: "90%", marginTop: "1.2rem", fontSize: "1.1rem" }}>
-                  <Link to="/" style={{ textDecoration: "none", color: "white" }}>Submit</Link>
+                  Submit
                 </Button>
               </form>
             </div>

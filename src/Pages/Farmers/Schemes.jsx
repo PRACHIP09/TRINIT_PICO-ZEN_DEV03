@@ -4,9 +4,25 @@ import {
     CardActions, Button
 } from '@mui/material'
 import { textAlign } from '@mui/system'
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import image from '../../Images/login.webp'
+import axios from 'axios'
 const Schemes = () => {
+
+    const [load, setLoad] = useState([]);
+    useEffect(() => {
+        loadList();
+    }, []);
+
+    const loadList = async () => {
+        const result = await axios.get("http://localhost:5500/api/scheme/getAll", {
+            headers: { "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U2NjYyYjZmNDgwZGY4OTJhNGU2ZDMiLCJpYXQiOjE2NzYwNTI2MzF9.wC3cyq0bXap7rAug3Yf5VmECeIf1_rbdQjxLw6bkjes` },
+        });
+        setLoad(result.data.data);
+
+    };
+    console.log(load);
+
     return (
         <div>
             <Grid container spacing={2}>
@@ -16,6 +32,8 @@ const Schemes = () => {
                 <Grid item xs={12}>
                     Schemes
                 </Grid>
+                {load.map((item, index) => {
+                return(
                 <Grid item xs={12} md={3} sm={4}>
                     <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
                         <Grid container spacing={2}>
@@ -23,75 +41,18 @@ const Schemes = () => {
                                 <img src={image} style={{ height: "100%", width: "100%" }} />
                             </Grid>
                             <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "left" }}>
-                                Scheme Name
+                                {item.donation}
                             </Grid>
                             <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "right" }}>
                                 Know More
                             </Grid>
                             <Grid item xs={12} style={{ fontSize: "1.1rem" }}>
-                                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                                Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
+                               {item.desc}
                             </Grid>
                         </Grid>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={3} sm={4}>
-                    <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <img src={image} style={{ height: "100%", width: "100%" }} />
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "left" }}>
-                                Scheme Name
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "right" }}>
-                                Know More
-                            </Grid>
-                            <Grid item xs={12} style={{ fontSize: "1.1rem" }}>
-                                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                                Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
-                            </Grid>
-                        </Grid>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} md={3} sm={4}>
-                    <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <img src={image} style={{ height: "100%", width: "100%" }} />
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "left" }}>
-                                Scheme Name
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "right" }}>
-                                Know More
-                            </Grid>
-                            <Grid item xs={12} style={{ fontSize: "1.1rem" }}>
-                                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                                Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
-                            </Grid>
-                        </Grid>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} md={3} sm={4}>
-                    <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <img src={image} style={{ height: "100%", width: "100%" }} />
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "left" }}>
-                                Scheme Name
-                            </Grid>
-                            <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "right" }}>
-                                Know More
-                            </Grid>
-                            <Grid item xs={12} style={{ fontSize: "1.1rem" }}>
-                                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                                Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
-                            </Grid>
-                        </Grid>
-                    </Card>
-                </Grid>
+                )})}
             </Grid>
         </div>
     )

@@ -10,6 +10,9 @@ const Blog= () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
+
   return (
     <div>
       <Grid container spacing={2}>

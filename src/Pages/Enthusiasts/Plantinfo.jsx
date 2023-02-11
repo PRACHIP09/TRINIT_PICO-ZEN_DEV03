@@ -4,11 +4,15 @@ import image from '../../Images/login.webp'
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Info from './Info';
+import Data from './Data';
 const Plantinfo = () => {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [opendata, setOpendata] = React.useState(false);
+  const handleOpenData = () => setOpendata(true);
+  const handleCloseData = () => setOpendata(false);
   return (
     <div>
       <Grid container spacing={2}>
@@ -18,8 +22,11 @@ const Plantinfo = () => {
         <Grid item xs={12}>
           Description
         </Grid>
-        <Grid item xs={12} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
+        <Grid item xs={6} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
           <div onClick={handleOpen}>Add New Plant Today</div>
+        </Grid>
+        <Grid item xs={6} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
+          <div onClick={handleOpenData}>Review Plant Status</div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>
@@ -100,6 +107,14 @@ const Plantinfo = () => {
           </Card>
         </Grid>
       </Grid>
+      <Modal
+        open={opendata}
+        onClose={handleCloseData}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Data />
+      </Modal>
       <Modal
         open={open}
         onClose={handleClose}

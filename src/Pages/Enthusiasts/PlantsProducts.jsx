@@ -6,11 +6,48 @@ const PlantsProducts = () => {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          Title
+        <Grid item xs={6}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} style={{ fontSize: "2rem", textAlign: "left", paddingLeft: "5vh" }}>
+              The right farm equiments & <br />Fresh Plant Products for all needs
+            </Grid>
+            <Grid item xs={12} style={{ fontSize: "1.5rem", textAlign: "left", paddingLeft: "5vh" }}>
+              We help you grow and conume healtier, higher quality plants
+            </Grid>
+            <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" , paddingLeft: "5vh"}}>
+              Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
+              Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
+            </Grid>
+            <Grid item xs={12}>
+              <Grid container spacing={2} padding={2}>
+                <Grid item xs={6}>
+                  <Card style={{ boxShadow: "none", paddingBottom: "2vh", borderRadius: "2vh" }}>
+                    <div>icon</div>
+                    <div style={{ fontSize: "1.5rem", margin: "2vh 0vh" }}>10,000+</div>
+                    <div style={{ fontSize: "1.5rem", margin: "2vh 0vh" }}>Enthusiasts have joined</div>
+                    <Button style={{
+                      fontSize: "1rem", padding: "0.25vh 3vh", borderRadius: "5vh",
+                      backgroundColor: "greenyellow"
+                    }}>Know More</Button>
+                  </Card>
+                </Grid>
+                <Grid item xs={6}>
+                  <Card style={{ boxShadow: "none", paddingBottom: "2vh", borderRadius: "2vh" }}>
+                    <div>icon</div>
+                    <div style={{ fontSize: "1.5rem", margin: "2vh 0vh" }}>10,000+</div>
+                    <div style={{ fontSize: "1.5rem", margin: "2vh 0vh" }}>Farmers have joined</div>
+                    <Button style={{
+                      fontSize: "1rem", padding: "0.25vh 3vh", borderRadius: "5vh",
+                      backgroundColor: "greenyellow"
+                    }}>Know More</Button>
+                  </Card>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          about
+        <Grid item xs={6}>
+          <img src={image} style={{ width: "80%" }} />
         </Grid>
         <Grid item xs={12} md={3} sm={6}>
           <Card sx={{ textAlign: "center", boxShadow: "none", padding: "1.5vh" }}>

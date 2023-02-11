@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@coreui/react-chartjs": "^2.1.2",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
@@ -27,6 +28,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
+    "sweetalert2": "^11.7.1",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },

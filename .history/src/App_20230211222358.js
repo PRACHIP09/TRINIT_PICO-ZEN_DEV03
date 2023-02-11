@@ -28,7 +28,7 @@ import Card from './Components/Enthusiastsnavbar/Card';
 import Donation from './Components/Enthusiastsnavbar/Donation';
 import Search from './Pages/Search';
 import Blog from './Pages/Blog';
-// import SubmitForm from './Pages/Farmers/SubmitForm';
+import SubmitForm from './Pages/Farmers/SubmitForm';
 
 function App() {
   return (
@@ -56,7 +56,7 @@ function App() {
       <Route path="/donate" element={<><NavbarE/><Donation/><StickyFooter/></>} />
       <Route path="/search" element={<><Navbar/><Search/><StickyFooter/></>} />
       <Route path="/blog" element={<><Navbar/><Blog/><StickyFooter/></>} />
-      {/* <Route path="/submitform" element={<><Navbar/><SubmitForm/><StickyFooter/></>} /> */}
+      <Route path="/submitform" element={<><Navbar/><SubmitForm/><StickyFooter/></>} />
     </Routes>
   );
 }

@@ -28,7 +28,7 @@ import Card from './Components/Enthusiastsnavbar/Card';
 import Donation from './Components/Enthusiastsnavbar/Donation';
 import Search from './Pages/Search';
 import Blog from './Pages/Blog';
-// import SubmitForm from './Pages/Farmers/SubmitForm';
+import SubmitForm from './Pages/Farmers/SubmitForm';
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>
       <Route path="/schemes" element={<><NavbarF/><Schemes/><StickyFooter/></>} />
-      <Route path="/prediction" element={<><NavbarF/><Prediction/><StickyFooter/></>} />
+      {/* <Route path="/prediction" element={<><NavbarF/><Prediction/><StickyFooter/></>} /> */}
       <Route path="/questions" element={<><NavbarF/><QuestionAns/><StickyFooter/></>} />
       <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><StickyFooter/></>} />
       <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><StickyFooter/></>}/>
@@ -56,7 +56,7 @@ function App() {
       <Route path="/donate" element={<><NavbarE/><Donation/><StickyFooter/></>} />
       <Route path="/search" element={<><Navbar/><Search/><StickyFooter/></>} />
       <Route path="/blog" element={<><Navbar/><Blog/><StickyFooter/></>} />
-      {/* <Route path="/submitform" element={<><Navbar/><SubmitForm/><StickyFooter/></>} /> */}
+      <Route path="/prediction" element={<><Navbar/><SubmitForm/><StickyFooter/></>} />
     </Routes>
   );
 }

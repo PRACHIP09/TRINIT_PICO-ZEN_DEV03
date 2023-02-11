@@ -7,10 +7,8 @@ import wallpaper1 from "../../Images/wallpaper1.webp"
 import wallpaper2 from "../../Images/wallpaper2.webp"
 import wallpaper3 from "../../Images/wallpaper3.webp"
 import wallpaper4 from "../../Images/wallpaper4.webp"
-import image from "../../Images/enthu.png"
-import { Link } from 'react-router-dom';
-
-const HomePageE = () => {
+import image from "../../Images/farmer.png"
+const HomePageF = () => {
   const settings = {
     infinite: true,
     speed: 5000,
@@ -40,18 +38,17 @@ const HomePageE = () => {
         <Grid item xs={12}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
-                  Want to be a direct door to door <br />customer of a farmer ?<br />
-                  We have you sorted out
-                </Grid>
-                <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
-       <Link to="/products">           <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Connect with Farmers</Button></Link>
-                </Grid>
-              </Grid>
+              <img src={image} style={{ width: "80%" }} />
             </Grid>
             <Grid item xs={6}>
-              <img src={image} style={{ width: "80%" }} />
+              <Grid container spacing={2}>
+                <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
+                  Want help about which crops to grow? <br />No worries we have our new autonomous model to help you find the best solution
+                </Grid>
+                <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
+                  <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Connect with Farmers</Button>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
@@ -86,11 +83,11 @@ const HomePageE = () => {
           </Slider>
           <Grid item xs={12}>
             <Grid container spacing={2}>
-              <Grid item xs={8} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign:"right" }}>
-                Donate and get a chance to visit the FarmLands
+              <Grid item xs={8} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign: "right" }}>
+                Want to know more about the schemes ?
               </Grid>
-              <Grid item xs={4} style={{paddingLeft:"5vh",paddingTop:"9vh", textAlign:"left"}}>
-              <Link to="/donate">     <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate Today</Button></Link>
+              <Grid item xs={4} style={{ paddingLeft: "5vh", paddingTop: "9vh", textAlign: "left" }}>
+                <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Send Your Doubts</Button>
               </Grid>
             </Grid>
           </Grid>
@@ -101,4 +98,4 @@ const HomePageE = () => {
   )
 }
 
-export default HomePageE
+export default HomePageF

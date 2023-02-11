@@ -21,6 +21,9 @@ const RawSchema = new mongoose.Schema({
 
     // },
 
+    title:{
+        type:String
+    },
 
     desc:{
         type:String,

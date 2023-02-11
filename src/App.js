@@ -28,20 +28,21 @@ import Card from './Components/Enthusiastsnavbar/Card';
 import Donation from './Components/Enthusiastsnavbar/Donation';
 import Search from './Pages/Search';
 import Blog from './Pages/Blog';
+import LingualNavbar from './Components/ChatBot/LingualNavbar';
 // import SubmitForm from './Pages/Farmers/SubmitForm';
 
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login/>}/>
-      <Route path="/" element={<><Navbar/><HomePage/><StickyFooter/></>}/>
+      <Route path="/" element={<><Navbar/><LingualNavbar/><HomePage/><StickyFooter/></>}/>
       <Route path="/signup" element={<Signup/>} />
 
       <Route path="/contactus" element={<><Navbar/><Contact/><StickyFooter/></>} />
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>
       <Route path="/schemes" element={<><NavbarF/><Schemes/><StickyFooter/></>} />
-      <Route path="/prediction" element={<><NavbarF/><SubmitForm/><StickyFooter/></>} />
+      <Route path="/prediction" element={<><NavbarF/><Prediction/><StickyFooter/></>} />
       <Route path="/questions" element={<><NavbarF/><QuestionAns/><StickyFooter/></>} />
       <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><StickyFooter/></>} />
       <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><StickyFooter/></>}/>

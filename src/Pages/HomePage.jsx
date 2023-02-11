@@ -8,8 +8,10 @@ import wallpaper2 from "../Images/wallpaper2.webp"
 import wallpaper3 from "../Images/wallpaper3.webp"
 import wallpaper4 from "../Images/wallpaper4.webp"
 import image from "../Images/farmer.png"
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom';
 const HomePage = () => {
+  const {t} = useTranslation();
   const settings = {
     infinite: true,
     speed: 5000,
@@ -20,16 +22,16 @@ const HomePage = () => {
   };
   const wallp = [
     {
-      name: wallpaper1, title: "Daily Life", text: "Farmers engage in a variety of activities related to the production of raw materials. These activities include land preparation, planting, fertilization, irrigation, pest control, and harvesting. Farmers must carefully manage these activities to ensure a high-quality crop and to maximize yields.",
+      name: wallpaper1, title: "Daily Life", text: "text1",
     },
     {
-      name: wallpaper2, title: "Raw Materials", text: "Once the raw materials have been harvested, farmers often engage in further processing to create a finished product. This may involve cleaning, grading, and packaging the crop for sale. Farmers may also work with processors or manufacturers to create value-added products, such as juices or snacks, from their raw materials.",
+      name: wallpaper2, title: "Raw Materials", text: "text2",
     },
     {
-      name: wallpaper3, title: "Product", text: "The effects of government schemes on farmers can be significant. Government programs may provide financial support to farmers, such as subsidies or loans, to help them purchase inputs like seeds, fertilizer, and equipment. Government-sponsored extension services may also provide training and technical assistance to farmers, helping them to improve their farming practices and increase yields.",
+      name: wallpaper3, title: "Product", text: "text3",
     },
     {
-      name: wallpaper4, title: "Government Schmes & Questions asked", text: "Questions that are frequently asked by farmers include inquiries about the best practices for a specific crop, how to address pest problems, and information on available government support programs. They may also ask about market conditions and prices, as these factors can greatly impact their income and profitability. Additionally, farmers may seek advice on how to adopt new technologies or farming methods to increase efficiency and competitiveness in the market.",
+      name: wallpaper4, title: "Government Schemes & Questions asked", text: "text4",
     },
   ]
   // const wallp = [wallpaper1, wallpaper2, wallpaper3, wallpaper4];
@@ -45,7 +47,8 @@ const HomePage = () => {
             <Grid item xs={6}>
               <Grid container spacing={2}>
                 <Grid item xs={12} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "15vh" }}>
-               Farmers play a vital role in providing food and other agricultural products that are essential to sustain human life and support economic growth.They are an indispensable part of not only our daily lives but also our country's future.
+                {t('name1')} 
+               
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
                               {/* <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }} >Connect with Farmers</Button> */}
@@ -73,9 +76,9 @@ const HomePage = () => {
                         }}></Grid>
                         <Grid item xs={12} sm={12} md={7} style={{ overflow: "hidden" }}>
                           <div style={{ fontSize: "2.5rem", textAlign: "left", marginTop: "2%", padding: "0vh 2vh" }}>
-                            {item.title}</div>
+                            {t(`${item.title}`)}</div>
                           <div style={{ fontSize: "1.3rem", textAlign: "left", marginTop: "7%", padding: "1vh 2vh" }}>
-                            {item.text}</div>
+                          {t(`${item.text}`)}</div>
                         </Grid>
                       </Grid>
                     </Grid>
@@ -86,11 +89,11 @@ const HomePage = () => {
           </Slider>
           <Grid item xs={12}>
             <Grid container spacing={2}>
-              <Grid item xs={8} style={{ fontSize: "2rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign: "right" }}>
-                Want to explore and fall in love with nature? Join us in our Journey.
+              <Grid item xs={9} style={{ fontSize: "1.75rem", fontWeight: "700", textAlign: "left", paddingLeft: "10vh", paddingTop: "10vh", textAlign: "right" }}>
+                {t('name2')}
               </Grid>
-              <Grid item xs={4} style={{ paddingLeft: "5vh", paddingTop: "9vh", textAlign: "left" }}>
-                        <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Contact Us</Button>
+              <Grid item xs={3} style={{ paddingLeft: "5vh", paddingTop: "9vh", textAlign: "left" }}>
+                        <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>{t('contact')}</Button>
               </Grid>
             </Grid>
           </Grid>

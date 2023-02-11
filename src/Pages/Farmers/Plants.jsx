@@ -17,8 +17,9 @@ const Plants = () => {
     }, []);
 
     const loadList = async () => {
+        const token = localStorage.getItem("token")
         const result = await axios.get("http://localhost:5500/api/product/getAll", {
-            headers: { "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U3OGEwNDNmMWMzNjIwYzc5NGRkZjAiLCJpYXQiOjE2NzYxMjU4OTd9.Ne0sVsp_qWdXG_hqoE7ev-il9rZH_jsfDTqACDTHPZE` },
+            headers: { "Authorization": `Bearer ${token}` },
         });
         setLoad(result.data.data);
 

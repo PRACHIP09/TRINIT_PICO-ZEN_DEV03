@@ -2,9 +2,7 @@ import { Grid, TextField, Button, Card, Modal, Box, Typography } from '@mui/mate
 import React, { useState, useEffect } from 'react'
 import { useFormik } from "formik";
 import * as yup from 'yup';
-import image from '../../Images/login.webp'
-import AddAnswer from './AddAnswer';
-import axios from 'axios';
+import Doubts from '../Government/Doubts';
 const validationSchema = yup.object({
     question: yup
         .string('Enter your Question')
@@ -61,20 +59,6 @@ const QuestionAns = () => {
     });
 
 
-    const [load, setLoad] = useState([]);
-    useEffect(() => {
-        loadList();
-    }, []);
-
-    const loadList = async () => {
-        const result = await axios.get("http://localhost:5500/api/question/getAll", {
-            headers: { "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U2NjYyYjZmNDgwZGY4OTJhNGU2ZDMiLCJpYXQiOjE2NzYwNTI2MzF9.wC3cyq0bXap7rAug3Yf5VmECeIf1_rbdQjxLw6bkjes` },
-        });
-        setLoad(result.data.data);
-
-    };
-    console.log(load);
-
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -83,15 +67,7 @@ const QuestionAns = () => {
     return (
         <div>
             <Grid container spacing={2} padding={2}>
-                <Grid item xs={12}>
-                    Title
-                </Grid>
-                <Grid item xs={12}>
-                    Description
-                </Grid>
-                <Grid item xs={12}>
-
-                </Grid>
+                
                 <Grid item md={4} xs={12} style={{ fontSize: "3vh", textAlign: "left", marginTop: "1.75vh" }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
@@ -141,44 +117,9 @@ const QuestionAns = () => {
                         </div>
                     </Grid>
                 </Grid>
-                {load.map((item, index) => {
-                    return(
-                    <Grid item xs={12} md={6} sm={6} >
-                        <Card style={{ margin: "2vh", boxShadow: "none", padding: "2vh" }}>
-                            <Grid container spacing={2}>
-                                <Grid item xs={6} style={{ fontSize: "1.5rem", textAlign: "left" }}>
-                                    {item.user_name}
-                                </Grid>
-                                <Grid item xs={6} style={{ fontSize: "1.5rem", textAlign: "right" }}>
-                                    <Button onClick={handleOpen}>Answer the Query</Button>
-                                </Grid>
-                                <Grid item xs={12} style={{ fontSize: "1.2rem", textAlign: "left", marginTop: "-2vh" }}>
-                                    {item.user_email}
-                                </Grid>
-                                <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
-                                    {item.question}
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <img src={image} style={{ height: "30vh", width: "45vh" }} />
-                                </Grid>
-                                <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
-                                    Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                                    Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
-                                </Grid>
-                            </Grid>
-                        </Card>
-                    </Grid>
-                )})}
+                <Doubts />
 
             </Grid>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <AddAnswer />
-            </Modal>
         </div>
     )
 }

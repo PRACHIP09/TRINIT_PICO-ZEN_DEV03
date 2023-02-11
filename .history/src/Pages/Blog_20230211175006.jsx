@@ -15,7 +15,7 @@ const Blog= () => {
     title: 'Well being of farmers',
     description:
       "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
+    image: 'https://unsplash.com/photos/3u51-uLQICc',
     imageText: 'main image description',
     linkText: 'Continue reading…',
   };
@@ -60,7 +60,17 @@ const Blog= () => {
                 Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
               </Grid>
             </Grid>
-           
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <img src={image} style={{ height: "100%", width: "100%" }} />
+              </Grid>
+              <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
+                Description
+              </Grid>
+              <Grid item xs={12} style={{ fontSize: "1.1rem", textAlign: "left" }}>
+                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
+              </Grid>
+            </Grid>
           </Card>
         </Grid>
       </Grid>

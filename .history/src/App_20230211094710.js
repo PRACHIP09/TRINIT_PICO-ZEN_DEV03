@@ -13,7 +13,6 @@ import Schemes from './Pages/Farmers/Schemes';
 import Rawmaterial from './Pages/Farmers/Rawmaterial';
 import NavbarE from './Components/Enthusiastsnavbar/NavbarE';
 import HomepageF from './Pages/Farmers/HomepageF';
-import Prediction from './Pages/Farmers/Prediction';
 import HomepageE from './Pages/Enthusiasts/HomepageE';
 import PlantsProduct from './Pages/Enthusiasts/PlantsProducts';
 import CartsE from './Pages/Enthusiasts/CartsE';
@@ -35,12 +34,10 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/" element={<><Navbar/><HomePage/><Footer/></>}/>
       <Route path="/signup" element={<Signup/>} />
-
       <Route path="/contactus" element={<><Navbar/><Contact/><Footer/></>} />
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>
       <Route path="/schemes" element={<><NavbarF/><Schemes/><StickyFooter/></>} />
-      <Route path="/prediction" element={<><NavbarF/><Prediction/><StickyFooter/></>} />
       <Route path="/questions" element={<><NavbarF/><QuestionAns/><StickyFooter/></>} />
       <Route path="/rawmaterials" element={<><NavbarF/><Rawmaterial/><StickyFooter/></>} />
       <Route path="/home-enthusiast" element={<><NavbarE/><HomepageE/><StickyFooter/></>}/>

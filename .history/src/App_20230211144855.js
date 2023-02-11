@@ -35,7 +35,6 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/" element={<><Navbar/><HomePage/><Footer/></>}/>
       <Route path="/signup" element={<Signup/>} />
-
       <Route path="/contactus" element={<><Navbar/><Contact/><Footer/></>} />
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>

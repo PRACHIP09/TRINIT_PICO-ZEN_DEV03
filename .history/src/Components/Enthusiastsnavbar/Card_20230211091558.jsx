@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import React from 'react'
 
-const Card1 = ({ amount, img, checkoutHandler }) => {
+const Card = ({ amount, img, checkoutHandler }) => {
     return (
         <div>
             <img src={img} className="hide-feature"/>
@@ -11,4 +11,4 @@ const Card1 = ({ amount, img, checkoutHandler }) => {
     )
 }
 
-export default Card1
+export default Card

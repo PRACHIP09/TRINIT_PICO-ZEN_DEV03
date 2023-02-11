@@ -28,14 +28,14 @@ import Card from './Components/Enthusiastsnavbar/Card';
 import Donation from './Components/Enthusiastsnavbar/Donation';
 import Search from './Pages/Search';
 import Blog from './Pages/Blog';
-
+import Blog1 from './Pages/Blog1'
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login/>}/>
       <Route path="/" element={<><Navbar/><HomePage/><Footer/></>}/>
       <Route path="/signup" element={<Signup/>} />
-
+      <Route path="/blog1" element={<Blog1/>} />
       <Route path="/contactus" element={<><Navbar/><Contact/><Footer/></>} />
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>

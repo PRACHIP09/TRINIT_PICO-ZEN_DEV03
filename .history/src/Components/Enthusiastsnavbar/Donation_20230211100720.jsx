@@ -61,7 +61,7 @@ const Donation = () => {
     return (
       
     <Box sx={{ flexGrow: 1 }}>
-            {/* <Card sx={{ display: 'flex' }}>
+            <Card sx={{ display: 'flex' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
@@ -77,7 +77,7 @@ const Donation = () => {
      
     </Card>
         
-         */}
+        
             <Grid container spacing={7}>
         <Grid container
   spacing={0}

@@ -4,47 +4,22 @@ import image from '../Images/login.webp'
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Info from '../Pages/Enthusiasts/BlogInfo';
-import MainFeaturedPost from './MainFeaturedPost';
-import FeaturedPost from './FeaturedPost';
+
 const Blog= () => {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const mainFeaturedPost = {
-    title: 'Well being of farmers',
-    description:
-      "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
-    imageText: 'main image description',
-    linkText: 'Continue reading…',
-  };
-  const featuredPosts = [
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random',
-      imageLabel: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random',
-      imageLabel: 'Image Text',
-    },
-  ];
   return (
     <div>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-        <MainFeaturedPost post={mainFeaturedPost} />
+          Title
         </Grid>
-        
-          <Grid item xs={12} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
+        <Grid item xs={12}>
+          Description
+        </Grid>
+        <Grid item xs={12} style={{ backgroundColor: "#59D7B5", fontSize: "1.5rem", padding: "2vh 0vh" }}>
           <div onClick={handleOpen}>Share Innovation</div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
@@ -60,7 +35,6 @@ const Blog= () => {
                 Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
               </Grid>
             </Grid>
-           
           </Card>
         </Grid>
       </Grid>

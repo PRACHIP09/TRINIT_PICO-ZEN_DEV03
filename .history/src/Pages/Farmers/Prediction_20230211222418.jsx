@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,18 +17,17 @@ import axios from 'axios'
 const theme = createTheme();
 
 export default function SignIn() {
-  const [state, setState] = useState([])
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const headers = {
-      // "content-type": "application/json",
+      "content-type": "application/json",
       // 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
       'Access-Control-Allow-Origin':'*',
     };
     axios
     .post('http://127.0.0.1:5000/crop-predict',data,{headers})
-    .then((res) =>{ setState(res.data)})
+    .then((res) => console.log(res.data))
     .catch((err) => console.error(err));
 
   
@@ -138,7 +137,7 @@ export default function SignIn() {
             >
               Predict
             </Button>
-            <div className="data">{state}</div>     
+      
           </Box>
         </Box>
         </div>

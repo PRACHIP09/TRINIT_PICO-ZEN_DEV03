@@ -8,8 +8,6 @@ import wallpaper2 from "../../Images/wallpaper2.webp"
 import wallpaper3 from "../../Images/wallpaper3.webp"
 import wallpaper4 from "../../Images/wallpaper4.webp"
 import image from "../../Images/enthu.png"
-import { Link } from 'react-router-dom';
-
 const HomePageE = () => {
   const settings = {
     infinite: true,
@@ -46,7 +44,7 @@ const HomePageE = () => {
                   We have you sorted out
                 </Grid>
                 <Grid item xs={12} style={{ textAlign: "left", paddingLeft: "10vh" }}>
-       <Link to="/products">           <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Connect with Farmers</Button></Link>
+                  <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Connect with Farmers</Button>
                 </Grid>
               </Grid>
             </Grid>
@@ -90,7 +88,7 @@ const HomePageE = () => {
                 Donate and get a chance to visit the FarmLands
               </Grid>
               <Grid item xs={4} style={{paddingLeft:"5vh",paddingTop:"9vh", textAlign:"left"}}>
-              <Link to="/donate">     <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate Today</Button></Link>
+                <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate Today</Button>
               </Grid>
             </Grid>
           </Grid>

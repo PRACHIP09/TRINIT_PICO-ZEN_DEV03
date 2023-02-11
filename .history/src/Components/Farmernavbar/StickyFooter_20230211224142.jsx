@@ -87,7 +87,7 @@ const StickyFooter = () => {
                                                 Blog
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
-                                                Contact Us 
+                                                About Us
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -97,16 +97,16 @@ const StickyFooter = () => {
                                                 Learn More
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
-                                                Community
+                                                Pricing
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
-                                                Vision
+                                                Vloggers
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
-                                                Mission
+                                                Brands
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
-                                                Volunteers
+                                                Teams
                                             </Grid>
                                             <Grid item xs={12} style={{ fontSize: "1rem", margin: "1vh 0vh 0vh 0vh" }} >
                                                 Creators

@@ -90,7 +90,7 @@ const HomePageE = () => {
                 Donate and get a chance to visit the FarmLands
               </Grid>
               <Grid item xs={4} style={{paddingLeft:"5vh",paddingTop:"9vh", textAlign:"left"}}>
-              <Link to="/donate">     <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate Today</Button></Link>
+              <Link to="/products">     <Button style={{ fontSize: "1.1rem", backgroundColor: "green", padding: "1vh 5vh", color: "white" }}>Donate Today</Button></Link>
               </Grid>
             </Grid>
           </Grid>

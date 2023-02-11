@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { useFormik } from "formik";
 import * as yup from 'yup';
 import image from '../Images/login.webp'
-import image1 from '../Images/plantimage.png'
 const validationSchema = yup.object({
     question: yup
         .string('Enter your Question')
@@ -40,9 +39,6 @@ const Search = () => {
                     The best time to plant a tree was 25 years ago <br />
                     The second best day to plant a tree is Today
                 </Grid>
-                <Grid item xs={12}>
-          <img src={image1} style={{width:"35vh" , height:"25vh"}} />
-        </Grid>
                 <Grid item xs={12} style={{fontSize:"1.2rem", padding:"2vh 5vh"}}>
                     A plant comprises more than 95% water; every tree we find around us was once a plant many years ago. It’s no surprise that they provide sustenance to living beings; without plants, it would be impossible to have a life on earth. There are three main types of plants – conifers, ferns, and flowering plants. Flowering plants are described as those species that grow leaves such as roses, tulips, dandelions, sunflowers, etc. Conifers are evergreens that grow tall and sometimes have needles instead of leaves. Ferns are non-flowering plants that don’t have leaves or flowers. Blue-green algae originated 3 billion years ago and were known to be the first plants on this earth.
                 </Grid>

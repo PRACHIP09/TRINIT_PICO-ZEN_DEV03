@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Prediction = () => {
+const App = () => {
   const [formData, setFormData] = useState({
     nitrogen: '',
     phosphorus: '',
@@ -97,4 +97,4 @@ const Prediction = () => {
   );
 };
 
-export default Prediction;
+export default App;

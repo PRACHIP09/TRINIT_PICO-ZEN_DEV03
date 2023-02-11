@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Prediction = () => {
+const App = () => {
   const [formData, setFormData] = useState({
     nitrogen: '',
     phosphorus: '',
@@ -22,7 +22,7 @@ const Prediction = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('http://127.0.0.1:5000/crop-predict', formData)
+      .post('http://example.com/api/submit', formData)
       .then((res) => console.log(res.data))
       .catch((err) => console.error(err));
   };
@@ -97,4 +97,4 @@ const Prediction = () => {
   );
 };
 
-export default Prediction;
+export default App;

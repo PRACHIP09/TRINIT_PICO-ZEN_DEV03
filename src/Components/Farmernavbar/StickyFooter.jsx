@@ -44,14 +44,14 @@ const StickyFooter = () => {
                                             <SquareIcon style={{ color: "white" }} />
                                         </Grid>
                                         <Grid item xs={10} style={{ marginTop: "1.7vh" }}>
-                                            TRENDSETTERS
+                                            CommuneFarm
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12} style={{
                                         margin: "2vh 0vh", padding: "1vh 1.5vh",
                                         border: "1px solid white", fontSize: "1rem"
                                     }}>
-                                        Enter email to recieve latest trending news
+                                        Enter email to recieve latest green news
                                     </Grid>
                                     <Grid item xs={12} style={{ fontSize: "1.3rem", marginBottom: "2vh" }} >
                                         Connect with us
@@ -142,7 +142,7 @@ const StickyFooter = () => {
                         <Grid item md={2} sm={12} xs={12} style={{ textAlign: "left" }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} style={{ margin: "3.5vh 0vh 0vh 0vh", fontSize: "1.3rem" }}>
-                                    Shop in Trend
+                                    Be a part of our Community
                                 </Grid>
                                 <Grid item xs={12}>
                                     <iframe

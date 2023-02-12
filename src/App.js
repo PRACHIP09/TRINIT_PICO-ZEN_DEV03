@@ -29,6 +29,7 @@ import Donation from './Components/Enthusiastsnavbar/Donation';
 import Search from './Pages/Search';
 import Blog from './Pages/Blog';
 import LingualNavbar from './Components/ChatBot/LingualNavbar';
+import Progress from './Pages/Enthusiasts/Progress';
 // import SubmitForm from './Pages/Farmers/SubmitForm';
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/" element={<><Navbar/><LingualNavbar/><HomePage/><StickyFooter/></>}/>
       <Route path="/signup" element={<Signup/>} />
-
+      <Route path="/plant-progress" element={<><NavbarE/><Progress/><StickyFooter/></>}/>
       <Route path="/contactus" element={<><Navbar/><Contact/><StickyFooter/></>} />
       <Route path="/home-farmer" element={<><NavbarF/><HomepageF/><StickyFooter/></>}/>
       <Route path="/products-to-sell" element={<><NavbarF/><Plants/><StickyFooter/></>}/>

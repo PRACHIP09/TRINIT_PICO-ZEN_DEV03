@@ -35,8 +35,11 @@ const Plants = () => {
         })
             .then(function (result) {
                 Swal.fire({
-                    icon: 'success',
-                    title: 'Your Product is added in Cart',
+                    title: 'List of Buyers',
+                    html:
+                        '<div>Shubham Shah &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 9874512031</div>' +
+                        '<div>Prachi Patel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 9878512031</div>' +
+                        '<div>Dhruv Gada &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 9874511542</div>',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -69,16 +72,10 @@ const Plants = () => {
                                     <Grid item xs={6} style={{ fontSize: "2.5vh", textAlign: "right" }}>
                                         ₹ {item.cost}/kg
                                     </Grid>
-                                    {/*<Grid item xs={12} style={{ fontSize: "2.5vh", textAlign: "left" }}>
-                Quantity in stock : 550 / 1000 kg
-              </Grid>
-              <Grid item xs={12} style={{ fontSize: "1.1rem" }}>
-                Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
-                </Grid>*/}
                                     <Grid item xs={12}>
                                         <Button style={{ background: "rgba(25, 135, 105, 0.8)", color: "white", fontSize: "2vh", fontWeight: "650", padding: "1vh 6vh" }}
                                             onClick={() => handlesubmit(item._id)}>
-                                                List of Buyers
+                                            List of Buyers
                                         </Button>
                                     </Grid>
                                 </Grid>

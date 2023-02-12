@@ -32,7 +32,7 @@ const Navbar = () => {
               <NavLink activeClassName="active" to='/search' className="indicator">SEARCH</NavLink>
             </Grid>
             <Grid item xs={1}>
-              <NavLink activeClassName="active" to='/blog' className="indicator">BLOG</NavLink>
+              <NavLink activeClassName="active" to='/blog' className="indicator">INNOVATION</NavLink>
             </Grid>
             <Grid item xs={1}>
               <NavLink activeClassName="active" to='/contactus' className="indicator">CONTACT</NavLink>

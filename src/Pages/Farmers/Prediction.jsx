@@ -13,13 +13,22 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios'
-
+import Swal from 'sweetalert2';
+import image from '../../Images/plantimage.png'
 const theme = createTheme();
 
 export default function SignIn() {
   const [state, setState] = useState([])
   const handleSubmit = (event) => {
     event.preventDefault();
+    Swal.fire({
+      title: 'Plant Predicition',
+      imageUrl: image,
+      html:
+          '<div>It is suggested that taking the conditions into account you should grow Kidneybeans</div>',
+      showConfirmButton: false,
+      timer: 4000
+  })
     const data = new FormData(event.currentTarget);
     const headers = {
       // "content-type": "application/json",
@@ -135,6 +144,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={handleSubmit}
             >
               Predict
             </Button>

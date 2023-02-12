@@ -40,6 +40,7 @@ const Contact = () => {
                                 <Grid item xs={12} style={{ height: "10vh" }}></Grid>
                             </Grid>
                         </Grid>
+                        {/*
                         <Grid item xs={12}>
                             <Grid container spacing={2} >
                                 <Grid item xs={12} style={{ height: "10vh" }}></Grid>
@@ -110,7 +111,7 @@ const Contact = () => {
                                 <Grid item xs={12} style={{ height: "10vh" }}></Grid>
                             </Grid>
                         </Grid>
-
+    */}
                         <Grid item xs={12}>
                             <iframe
                                 scrolling="no"

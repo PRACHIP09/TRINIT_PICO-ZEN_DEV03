@@ -2,7 +2,8 @@ import { Grid, TextField, Button, Card } from '@mui/material'
 import React, { useState } from 'react'
 import { useFormik } from "formik";
 import * as yup from 'yup';
-import image from '../Images/login.webp'
+import image from '../Images/rice.webp'
+import lily from '../Images/lily.jpg'
 import image1 from '../Images/plantimage.png'
 const validationSchema = yup.object({
     question: yup
@@ -41,9 +42,9 @@ const Search = () => {
                     The second best day to plant a tree is Today
                 </Grid>
                 <Grid item xs={12}>
-          <img src={image1} style={{width:"35vh" , height:"25vh"}} />
-        </Grid>
-                <Grid item xs={12} style={{fontSize:"1.2rem", padding:"2vh 5vh"}}>
+                    <img src={image1} style={{ width: "35vh", height: "25vh" }} />
+                </Grid>
+                <Grid item xs={12} style={{ fontSize: "1.2rem", padding: "2vh 5vh" }}>
                     A plant comprises more than 95% water; every tree we find around us was once a plant many years ago. It’s no surprise that they provide sustenance to living beings; without plants, it would be impossible to have a life on earth. There are three main types of plants – conifers, ferns, and flowering plants. Flowering plants are described as those species that grow leaves such as roses, tulips, dandelions, sunflowers, etc. Conifers are evergreens that grow tall and sometimes have needles instead of leaves. Ferns are non-flowering plants that don’t have leaves or flowers. Blue-green algae originated 3 billion years ago and were known to be the first plants on this earth.
                 </Grid>
                 <Grid item xs={12} style={{ fontSize: "3vh", textAlign: "center", marginTop: "1.75vh" }}>
@@ -80,14 +81,35 @@ const Search = () => {
                     <Card style={{ margin: "2vh", boxShadow: "none", padding: "2vh" }}>
                         <Grid container spacing={2}>
                             <Grid item xs={6} style={{ fontSize: "1.5rem", textAlign: "left" }}>
-                                Name
+                                Shubham Shah
                             </Grid>
                             <Grid item xs={12} style={{ fontSize: "1.2rem", textAlign: "left", marginTop: "-2vh" }}>
-                                info@gmail.com
+                                shubhams@gmail.com
+                            </Grid>
+                            <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
+                            How to grow water lily at home ?
+                            </Grid>
+                            <Grid item xs={12}>
+                                <img src={lily} style={{ height: "30vh", width: "45vh" }} />
                             </Grid>
                             <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
                                 Lorem ipsum gdshr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend mi.
                                 Vitae proin sagittis nisl rhoncus. Purus in mollis nunc sed id semper.
+                            </Grid>
+                        </Grid>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} md={6} sm={6} >
+                    <Card style={{ margin: "2vh", boxShadow: "none", padding: "2vh" }}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={6} style={{ fontSize: "1.5rem", textAlign: "left" }}>
+                                Dhruv Gada
+                            </Grid>
+                            <Grid item xs={12} style={{ fontSize: "1.2rem", textAlign: "left", marginTop: "-2vh" }}>
+                                dhruv@gmail.com
+                            </Grid>
+                            <Grid item xs={12} style={{ fontSize: "1.3rem", textAlign: "left" }}>
+                                How is rice grown ?
                             </Grid>
                             <Grid item xs={12}>
                                 <img src={image} style={{ height: "30vh", width: "45vh" }} />

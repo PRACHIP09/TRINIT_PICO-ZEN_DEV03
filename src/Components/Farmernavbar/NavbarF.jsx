@@ -8,7 +8,8 @@ import SimpleForm from '../ChatBot/Chatbot';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Mobilenavbar from './Mobilenavbar';
-
+import { Link } from 'react-router-dom';
+import VideocamIcon from '@mui/icons-material/Videocam';
 const NavbarF = () => {
 
   const [ModalOpen, setModalOpen] = useState(false);
@@ -29,7 +30,7 @@ const NavbarF = () => {
               <NavLink exact activeClassName="active" to='/home-farmer' className="indicator">HOME</NavLink>
             </Grid>
             <Grid item xs={1}>
-              <NavLink activeClassName="active" to='/products-to-sell' className="indicator">PRODUCTS</NavLink>
+              <NavLink activeClassName="active" to='/products-to-sell' className="indicator">CROPS</NavLink>
             </Grid>
             <Grid item xs={1}>
               <NavLink activeClassName="active" to='/schemes' className="indicator">SCHEMES</NavLink>
@@ -40,11 +41,16 @@ const NavbarF = () => {
             <Grid item xs={1}>
               <NavLink activeClassName="active" to='/questions' className="indicator">QUESTIONS</NavLink>
             </Grid>
-            <Grid item xs={2}>
-              <NavLink activeClassName="active" to='/rawmaterials' className="indicator">RAW MATERIALS</NavLink>
+            <Grid item xs={1}>
+              <NavLink activeClassName="active" to='/rawmaterials' className="indicator">PRODUCTS</NavLink>
             </Grid>
             <Grid item xs={1}>
               <NavLink activeClassName="active" to='/' className="indicator">LOGOUT</NavLink>
+            </Grid>
+            <Grid item xs={1} style={{ cursor: "pointer" }}>
+              <Link to="http://localhost:3030/e1008e45-3e13-4b60-8a0d-e046a65ebf48">
+                <VideocamIcon style={{ color: "#136a53", width: "5vh", height: "5vh" , marginTop:"-1vh" }} />
+              </Link>
             </Grid>
           </Grid>
         </Grid>

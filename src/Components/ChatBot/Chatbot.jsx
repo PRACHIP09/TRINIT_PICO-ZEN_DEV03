@@ -70,7 +70,7 @@ class SimpleForm extends Component {
         return (
             <ThemeProvider theme={theme}>
                 <ChatBot
-                    headerTitle="Welcome to Trendsetters"
+                    headerTitle="Welcome to CommuneFarm"
                     speechSynthesis={{ enable: true, lang: 'en' }}
                     steps={[
                         {
@@ -82,9 +82,9 @@ class SimpleForm extends Component {
                           id: 'list',
                           options: [
                             { value: 'whats-new', label: '1. Whats New', trigger: 'what-new' },
-                            { value: 'trend-talks', label: '2. Latest Trend Talks', trigger: 'trend-talk' },
-                            { value: 'whow-to-be-part', label: '3. How to be part of TrendSetters Community ', trigger: 'part-community' },
-                            { value: 'whats-your-style', label: '4. Tell us your style', trigger: 'your-style' },
+                            { value: 'trend-talks', label: '2. Latest Schemes', trigger: 'trend-talk' },
+                            { value: 'whow-to-be-part', label: '3. How to be part of CoomuneFram Community ', trigger: 'part-community' },
+                            { value: 'whats-your-style', label: '4. Tell us your favourite Planting Experience', trigger: 'your-style' },
                             { value: 'thank-you', label: '5. Exit', trigger: 'thanks' },
                             ],
                           

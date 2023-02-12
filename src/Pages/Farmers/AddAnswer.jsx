@@ -20,7 +20,12 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+
+
 const AddAnswer = () => {
+  
+
+  
   const formik = useFormik({
     initialValues: {
       answer: '',
@@ -31,37 +36,39 @@ const AddAnswer = () => {
     },
   });
 
-  return (
-    <div>
-      <Box sx={style}>
-        <div>
-          <div style={{ fontSize: "1.5rem" }}>Type your Answer here</div>
-          <form onSubmit={formik.handleSubmit}>
-            <Grid container spacing={2} marginTop={2}>
-              <Grid item xs={12}>
-                <TextField
-                  id="answer"
-                  name="answer"
-                  color='success'
-                  placeholder='Post your Answer'
-                  value={formik.values.answer}
-                  onChange={formik.handleChange}
-                  error={formik.touched.answer && Boolean(formik.errors.answer)}
-                  helperText={formik.touched.answer && formik.errors.answer}
-                  sx={{ width: "100%" }}
-                />
-                <Button color="success" variant="contained" type="submit"
-                  sx={{ width: "100%", marginTop: "1.2rem", fontSize: "1.1rem" }}>
-                  Submit
-                </Button>
-              </Grid>
-            </Grid>
-          </form>
-        </div>
-      </Box>
-      
-    </div>
-  )
-}
 
-export default AddAnswer
+    return (
+      <div>
+        <Box sx={style}>
+          <div>
+            <div style={{ fontSize: "1.5rem" }}>Type your Answer here</div>
+            <form onSubmit={formik.handleSubmit}>
+              <Grid container spacing={2} marginTop={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    id="answer"
+                    name="answer"
+                    color='success'
+                    placeholder='Post your Answer'
+                    value={formik.values.answer}
+                    onChange={formik.handleChange}
+                    error={formik.touched.answer && Boolean(formik.errors.answer)}
+                    helperText={formik.touched.answer && formik.errors.answer}
+                    sx={{ width: "100%" }}
+                  />
+                  <Button color="success" variant="contained" type="submit"
+                    sx={{ width: "100%", marginTop: "1.2rem", fontSize: "1.1rem" }}
+                    >
+                    Submit
+                  </Button>
+                </Grid>
+              </Grid>
+            </form>
+          </div>
+        </Box>
+
+      </div>
+    )
+  }
+
+  export default AddAnswer

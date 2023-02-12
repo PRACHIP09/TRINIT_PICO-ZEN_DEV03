@@ -38,6 +38,9 @@ const NavbarE = () => {
               <NavLink activeClassName="active" to='/plants-information' className="indicator">PLANTS</NavLink>
             </Grid>
             <Grid item xs={1}>
+              <NavLink activeClassName="active" to='/plant-progress' className="indicator">PROGRESS</NavLink>
+            </Grid>
+            <Grid item xs={1}>
               <NavLink activeClassName="active" to='/donate' className="indicator">DONATE</NavLink>
             </Grid>
             <Grid item xs={1}>

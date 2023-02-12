@@ -32,12 +32,12 @@ const validationSchema = yup.object({
 const SchemesG = () => {
   const token = localStorage.getItem("token")
   const icons1 = [
-    {name:"Seedling",image:Seedling}
-    ,{name:"Farming",image:Farming}
-    ,{name:"Harvest",image:Harvest}
-    ,{name:"Gardening",image:Gardening}
-    ,{name:"Agriculture",image:Agriculture}
-    ,{name:"Vegetation",image:Vegetation}]
+    { name: "Seedling", image: Seedling }
+    , { name: "Farming", image: Farming }
+    , { name: "Harvest", image: Harvest }
+    , { name: "Gardening", image: Gardening }
+    , { name: "Agriculture", image: Agriculture }
+    , { name: "Vegetation", image: Vegetation }]
 
   const formik = useFormik({
     initialValues: {
@@ -71,8 +71,8 @@ const SchemesG = () => {
 
   return (
     <div>
-      <Grid item xs={12} style={{ fontSize: "1.5rem" , margin:"3vh 0vh"}}>
-        
+      <Grid item xs={12} style={{ fontSize: "1.5rem", margin: "3vh 0vh" }}>
+
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
@@ -81,7 +81,7 @@ const SchemesG = () => {
               <Grid item xs={2}>
                 <Grid container spacing={1}>
                   <Grid item xs={12}>
-                    <img src={item.image} style={{width:"10vh", height:"10vh"}}/>
+                    <img src={item.image} style={{ width: "10vh", height: "10vh" }} />
                   </Grid>
                   <Grid item xs={12}>
                     {item.name}
@@ -101,56 +101,54 @@ const SchemesG = () => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} style={{ textAlign: "left", paddingLeft: "5vh", paddingTop:"5vh" }}>
+          <Grid item xs={12} md={6} style={{ textAlign: "left", paddingLeft: "5vh", paddingTop: "5vh" }}>
             <div style={{ fontSize: "1.5rem", marginBottom: "2vh" }}>
               Our Best Ongoing Schemes
             </div>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
+              Pradhan Mantri Kisan Samman Nidhi
               <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Ongoing</Button>
               <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>New</Button>
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
+              KCC for animal husbandry and fisheri
               <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Agricultural</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Fisheri</Button>
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              Group Accident Insurance scheme for Fsherman
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Fisheri</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Insurance</Button>
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              PM Kisan Dhan Yojana
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Loan</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Pm Funds</Button>
             </li>
             <div style={{ fontSize: "1.5rem", marginBottom: "2vh" }}>
               Our UpComing Schemes
             </div>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Ongoing</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>New</Button>
+              Launch of 600 PM Kisan Samruddhi Kendras (PM-KSK)
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>PM-KSK</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Upcoming</Button>
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Agricultural</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              Launching Bharat Urea Bags - of One Nation One Fertilizer Scheme for Farmers
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              PM kisan yojna
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Upcoming</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Benfits</Button>
             </li>
             <li style={{ fontSize: "1.3rem", marginBottom: "2vh" }}>
-              Scheme 1
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
-              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Here</Button>
+              Launch of Weekly Fertilizer International e-Magazine
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>Fertilizer</Button>
+              <Button style={{ backgroundColor: "green", color: "white", borderRadius: "5vh", height: "3vh", padding: "0vh 1vh", marginLeft: "2vh" }}>e-Maganize</Button>
             </li>
           </Grid>
           <Grid item xs={12} md={6}>
-            <div style={{ fontSize: "1.5rem", marginTop:"5vh" }}>
+            <div style={{ fontSize: "1.5rem", marginTop: "5vh" }}>
               Add Schema
             </div>
             <div>
